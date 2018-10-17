@@ -1,99 +1,69 @@
   
-   <html>
+  
+<html>
 <head>
-<meta charset="utf-8">
-<title>Framework7 - Full Featured Mobile HTML Framework For Building iOS & Android Apps</title>
-<meta property="og:image" content="//cdn.framework7.io/i/f7-banner.jpg">
-<meta name="viewport" content="width=device-width, viewport-fit=cover">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@framework7io">
-<meta name="twitter:creator" content="@framework7io">
-<meta name="twitter:title" content="Framework7">
-<meta name="twitter:description" content="A free and open source mobile HTML framework to develop hybrid mobile apps or web apps with iOS &amp; Android native look and feel">
-<meta name="twitter:image" content="https://avatars0.githubusercontent.com/u/31954178?s=200&amp;v=4">
-<link rel="stylesheet" href="//cdn.framework7.io/css/normalize.css">
-<link rel="stylesheet" href="//cdn.framework7.io/css/main.css">
-<link rel="shortcut icon" href="/i/favicon.png">
-<script src="//cdn.framework7.io/js/modernizr-2.7.1.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* The device with borders */
+.smartphone {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+}
+
+/* The horizontal line on the top of the device */
+.smartphone:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.smartphone:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+.smartphone .content {
+  width: 360px;
+  height: 640px;
+  background: white;
+}
+</style>
 </head>
 <body>
-<script>
-      (function(){
-        var bsa = document.createElement('script');
-           bsa.type = 'text/javascript';
-           bsa.async = true;
-           bsa.src = '//s3.buysellads.com/ac/bsa.js';
-        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
-      })();
-    </script>
-  <style>
-      .content {
-  color : #a5a8a9;
-line-height: 1.6;
-margin: 2em auto;
- font-family: "David Libre", serif;
-background-color : #fafafa;
-background-repeat : repeat-x;
-background-position : 50% top;
-margin-top : 1px;
-margin-bottom : 1px;
-max-width: 900px;
-padding : 16px;
-border : 1px solid #d9d9d9;
-}
-      </style><header class="home-header">
-  
-  
-  
-<div class="center">
-<div class="left">
-<div class="logo-title">
-<div class="title">Framework</div>
-<div class="logo-holder">
-<div class="triangle triangle-1"></div>
-<div class="triangle triangle-2"></div>
-<div class="triangle triangle-3"></div>
-<div class="triangle triangle-4"></div><a class="logo" href="./"></a>
+
+<div class="smartphone">
+  <div class="content">
+    <iframe src="https://yayanheeh.github.io/bangunan/kitchen-sink/core/index.html" style="width:100%;border:none;height:100%" />
+  </div>
 </div>
-</div>
-<div class="slogan">Full featured HTML framework<br>for building iOS & Android apps</div>
-<div class="buttons-links">
-<div class="buttons"><a href="https://github.com/framework7io/Framework7/releases/" target="_blank">Download</a><a href="/docs/introduction.html">Get Started</a></div>
-<div class="links"><a href="/docs/">Docs</a><a href="/templates/">Templates</a><a href="/showcase/">Apps Showcase</a><a href="http://forum.framework7.io">Forum</a></div>
-</div>
-<div class="carbon"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=framework7io" id="_carbonads_js"></script></div>
-<div class="release-info">MIT Licensed, v3.4.2 released on October 12, 2018<br/><br/><br/></div>
-<div class="patreon-github">
-<div class="github-buttons"><a href="https://github.com/nolimits4web/framework7/" target="_blank"><img src="//cdn.framework7.io/i/gh-logo.png"></a><a class="gh-stars" href="https://github.com/nolimits4web/framework7/" target="_blank"><span></span> stars</a><a class="gh-forks" href="https://github.com/nolimits4web/framework7/" target="_blank"><span></span> forks</a></div><a class="patreon-button" href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><span class="patreon-logo"></span><span class="patreon-text">Support Framework7</span></a>
-</div>
-</div>
-  
-<div class="phone">
-<iframe src="https://yayanheeh.github.io/bangunan/kitchen-sink/core/index.html?theme=ios" frameborder="0" scrolling="no"></iframe>
-<div class="statusbar"></div>
-<div class="theme-switch"><a class="active" href="https://yayanheeh.github.io/bangunan/kitchen-sink/core/index.html?theme=ios" target="_blank">
-<div class="theme-icon">
-<div class="logo-apple"></div><span>iOS</span>
-</div>
-<div class="fullscreen"><i></i></div></a><a href="https://yayanheeh.github.io/bangunan/kitchen-sink/core/index.html?theme=md" target="_blank">
-<div class="theme-icon">
-<div class="logo-android"></div><span>MD</span>
-</div>
-<div class="fullscreen"><i></i></div></a></div>
-</div>
-</div>
-    </header>
-  
-  
-  <script src="//cdn.framework7.io/js/jquery-1.11.0.min.js"></script>
-<script src="//cdn.framework7.io/js/main.js"></script>
-<script>var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '1l3voeJ']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src= ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();</script>
-<script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-74282934-1', 'auto');
-      ga('send', 'pageview');
-    </script>
+
+</body>
+</html>
+
+
+
+
+
