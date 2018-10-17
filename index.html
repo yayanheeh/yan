@@ -1,7 +1,20 @@
 
 <body>
-<script language="javascript" type="text/javascript" 
-  src="header.js"></script>
+<script>
+  getURL(
+    '/header.html',
+    function (data) {
+        var el = document.createElement(el);
+        el.innerHTML = data;
+        var fetch = el.querySelector('#new-header');
+        var embed = document.querySelector('#header');
+        if (!fetch || !embed) return;
+        embed.innerHTML = fetch.innerHTML;
+
+    }
+);
+  
+  </script>
 
 
 
