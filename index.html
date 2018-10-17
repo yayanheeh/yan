@@ -1,18 +1,4 @@
-<style>
-		body{
-	 background-color: #fff;
-   padding: 0px;
-   margin: 0px;
- }
 
-#gradient
-{
-  width: 100%;
-  height: 800px;
-  padding: 0px;
-  margin: 0px;
-}
-</style>
 <!--if-->
 <!--heaDER-->
 <style>
@@ -201,21 +187,7 @@ border : 1px solid #d9d9d9;
 <table width="100%" border="0 "><tr><td width="30%" bgcolor="" align="left"><img src="https://cdn.framework7.io/i/feats/material.jpg"width="300" height="300"/></td>
 	<td width="70%" bgcolor="" align="left>
 					  
-					 <p> Yayanheh (Framework)   adalah kerangka kerja seluler HTML sumber terbuka dan gratis untuk mengembangkan aplikasi seluler hibrida atau aplikasi web dengan tampilan dan nuansa asli iOS atau Android (Material). Ini juga alat aplikasi prototyping yang sangat diperlukan untuk menunjukkan prototipe aplikasi kerja sesegera mungkin jika Anda perlu.
-
-Pendekatan utama Yayanheh (Framework)  adalah memberi Anda kesempatan untuk membuat aplikasi iOS dan Android (Material) dengan HTML, CSS dan JavaScript dengan mudah dan jelas. Yayanheh (Framework)  penuh dengan kebebasan. Itu tidak membatasi imajinasi Anda atau menawarkan cara penyelesaian apa pun. Yayanheh (Framework)  memberi Anda kebebasan!
-
-Yayanheh (Framework) tidak kompatibel dengan semua platform. Ini hanya fokus pada iOS dan Android (Material) untuk menghadirkan pengalaman terbaik dan kesederhanaan.
-
-Yayanheh (Framework) pasti untuk Anda jika Anda memutuskan untuk membangun aplikasi hibrida iOS dan Android (Cordova atau PhoneGap) atau aplikasi web yang tampak seperti dan terasa sebagai aplikasi iOS atau Android (Material) asli yang hebat
-					  </p>				  
-					  </td></tr></table>
-
-</div>
-
-  <body>
-	  <div id="gradient"/><center> <h1><br/><font color="white">Uji coba Framework</font></h1></center>
-	  <center> 
+					  <center> 
 	
 	<div class="mobile-frame">
 					<img src="https://io13-high-dpi.appspot.com/images/n4_large.png">
@@ -225,8 +197,12 @@ Yayanheh (Framework) pasti untuk Anda jika Anda memutuskan untuk membangun aplik
 					<div id="rotate-btn" type="button">Rotate</div>
 				</div>
 </div>
-	</center>
-</body>
+	</center>			  
+					  </td></tr></table>
+
+</div>
+
+  
 
 <div style="padding-left:20px">
   <h1>Responsive Header</h1>
@@ -253,66 +229,3 @@ Yayanheh (Framework) pasti untuk Anda jika Anda memutuskan untuk membangun aplik
 </script>
 
 <!--ig-->
-<script>
-	
-var colors = new Array(
-  [62,35,255],
-  [60,255,60],
-  [255,35,98],
-  [45,175,230],
-  [255,0,255],
-  [255,128,0]);
-
-var step = 0;
-//color table indices for: 
-// current color left
-// next color left
-// current color right
-// next color right
-var colorIndices = [0,1,2,3];
-
-//transition speed
-var gradientSpeed = 0.002;
-
-function updateGradient()
-{
-  
-  if ( $===undefined ) return;
-  
-var c0_0 = colors[colorIndices[0]];
-var c0_1 = colors[colorIndices[1]];
-var c1_0 = colors[colorIndices[2]];
-var c1_1 = colors[colorIndices[3]];
-
-var istep = 1 - step;
-var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
-var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
-var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
-var color1 = "rgb("+r1+","+g1+","+b1+")";
-
-var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
-var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
-var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
-var color2 = "rgb("+r2+","+g2+","+b2+")";
-
- $('#gradient').css({
-   background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
-    background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
-  
-  step += gradientSpeed;
-  if ( step >= 1 )
-  {
-    step %= 1;
-    colorIndices[0] = colorIndices[1];
-    colorIndices[2] = colorIndices[3];
-    
-    //pick two new target color indices
-    //do not pick the same as the current one
-    colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-    colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-    
-  }
-}
-
-setInterval(updateGradient,10);
-</script>
