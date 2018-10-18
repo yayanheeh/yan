@@ -35,7 +35,41 @@ border : 1px solid #d9d9d9;
 <div class="square"></div>
 </div>
 </div>
-	
+	<body>
+  <div id="app">
+    <div class="panel panel-left panel-reveal">
+      <div class="block">
+        <p>Left Panel content here</p>
+        <p><a class="panel-close" href="#">Close me</a></p>
+        <p><a class="panel-open" href="#" data-panel="right">Open Right Panel</a></p>
+      </div>
+    </div>
+    <div class="panel panel-right panel-cover">
+      <div class="block">
+        <p>Right Panel content here</p>
+        <p><a class="panel-close" href="#">Close me</a></p>
+        <p><a class="panel-open" href="#" data-panel="left">Open Left Panel</a></p>
+      </div>
+    </div>
+    <div class="view view-main view-init">
+      <div class="page">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left"></div>
+            <div class="title">Panels</div>
+            <div class="right"></div>
+          </div>
+        </div>
+        <div class="page-content">
+          <div class="block">
+            <p><a class="panel-open" href="#">Open Left Panel</a></p>
+            <p><a class="panel-open" href="#" data-panel="right">Open Right Panel</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body
 	
 
 <div class="docs-content">
