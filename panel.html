@@ -1,0 +1,739 @@
+
+<style>
+  .content {
+  color : #a5a8a9;
+line-height: 1.6;
+margin: 2em auto;
+ font-family: "David Libre", serif;
+background-color : #fafafa;
+background-repeat : repeat-x;
+background-position : 50% top;
+margin-top : 1px;
+margin-bottom : 1px;
+padding : 16px;
+width : 900px;
+border : 1px solid #d9d9d9;
+}
+  </style>
+  
+
+  <link rel="stylesheet" href="//cdn.framework7.io/css/normalize.css">
+<link rel="stylesheet" href="//cdn.framework7.io/css/main.css">
+<link rel="shortcut icon" href="/i/favicon.png">
+<script src="//cdn.framework7.io/js/modernizr-2.7.1.min.js"></script>
+<title>Button</title>
+<div class="content">
+    <a href="index.html"> <img src="logo.png"></a> <div class="improve-docs-link"><small>Version: semelekete</small></div>
+<hr/>
+
+
+
+
+
+
+
+<main>
+<div class="center">
+<div class="docs-demo-device docs-demo-device-ios">
+<div class="docs-demo-device-buttons"><a class="active" data-theme="ios">iOS</a><a data-theme="md">Android</a></div>
+<div class="docs-demo-device-iframe">
+<iframe width="320" height="548" frameborder="0" scrolling="on"></iframe>
+<div class="fade-overlay"></div>
+</div>
+<div class="docs-demo-device-android-buttons">
+<div class="triangle"></div>
+<div class="circle"></div>
+<div class="square"></div>
+ </div>
+</div>
+
+<div class="docs-content">
+<div class="improve-docs-link"><a href="../../external.html?link=https://github.com/framework7io/framework7-website/edit/master/src/pug/docs/panel.pug" target="_blank">Improve this Doc</a></div>
+<h1>Panel / Side Panels</h1>
+<ul class="docs-index"></ul>
+<h2>Panel Layout</h2>
+<p>Let's look how to add Side Panels to our App. We may include up to 2 panels to our App, one on left side and another one on right side. We should add panels' HTML right in the beginning of the app root element (or &lt;body&gt; in case there is no root element in use):</p><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+  <span class="token comment">&lt;!-- App root element --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- Left panel --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel panel-left<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        ... panel content goes here ...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+    <span class="token comment">&lt;!-- Right panel --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel panel-right<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        ... panel content goes here ...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+    ...
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></pre></code>
+<h2>Panel Effect</h2>
+<p>After we added panels we need to choose opening effect for each panel. There could be one of two effects: <b>"Reveal"</b> (when panel moves out whole app's content) or <b>"Cover"</b> (when panel overlays app's content). If you want to use "Reveal" effect you should add additional <code><b>panel-reveal</b></code> class to Panel, or <code><b>panel-cover</b></code> for cover effect:</p><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+  <span class="token comment">&lt;!-- App root element --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- Left panel, let it be with reveal effect --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel panel-left panel-reveal<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        ... panel content goes here ...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+    <span class="token comment">&lt;!-- Right panel, with cover effect --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel panel-right panel-cover<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        ... panel content goes here ...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+    ...
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></pre></code>
+<h2>Panel App Parameters</h2>
+<p>It is possible to control some default panels behavior using global <a href="app.html#app-parameters">app parameters</a> by passing panels related parameters under <code>panel</code> parameter:</p>
+<table class="params-table">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>leftBreakpoint</td>
+<td>number</td>
+<td></td>
+<td>Minimal app width (in px) when left panel becomes always visible</td>
+</tr>
+<tr>
+<td>rightBreakpoint</td>
+<td>number</td>
+<td></td>
+<td>Minimal app width (in px) when right panel becomes always visible</td>
+</tr>
+<tr>
+<td>swipe</td>
+<td>string</td>
+<td></td>
+<td>Disabled by default. If you want to enable ability to open/close side panels with swipe you can pass here <code>left</code> (for left panel) or <code>right</code> (for right panel) or <code>both</code> (for both panels).</td>
+</tr>
+<tr>
+<td>swipeActiveArea</td>
+<td>number</td>
+<td>0</td>
+<td>Width (in px) of invisible edge from the screen that triggers swipe panel</td>
+</tr>
+<tr>
+<td>swipeCloseOpposite</td>
+<td>boolean</td>
+<td>true</td>
+<td>This parameter gives ability to close opposite panel by swipe. For example, if your swipePanel is "left", then you could close "right" panel also with swipe.</td>
+</tr>
+<tr>
+<td>swipeOnlyClose</td>
+<td>boolean</td>
+<td>false</td>
+<td>This parameter allows to close (but not open) panels with swipes</td>
+</tr>
+<tr>
+<td>swipeNoFollow</td>
+<td>boolean</td>
+<td>false</td>
+<td>Fallback option for potentially better performance on old/slow devices. If you enable it, then side panel will not follow your finger during touch, it will be automatically opened/closed on swipe left/right.</td>
+</tr>
+<tr>
+<td>swipeThreshold</td>
+<td>number</td>
+<td>0</td>
+<td>Panel will not move with swipe if "touch distance" will be less than this value (in px).</td>
+</tr>
+<tr>
+<td>closeByBackdropClick</td>
+<td>boolean</td>
+<td>true</td>
+<td>Enable/disable ability to close panel by clicking outside of panel (on panel's backdrop)</td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p><pre><code class="js"><span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Framework</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  panel<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    swipe<span class="token punctuation">:</span> <span class="token string">'left'</span><span class="token punctuation">,</span>
+    leftBreakpoint<span class="token punctuation">:</span> <span class="token number">768</span><span class="token punctuation">,</span>
+    rightBreakpoint<span class="token punctuation">:</span> <span class="token number">1440</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></code>
+<h2>Panel App Methods</h2>
+<p>Let's look at related App methods to work with Panel:</p>
+<div class="method-wrap">
+<p><span class="method">app.panel.open(<span>side, animate</span>)</span>- open panel</p>
+<ul class="method-parameters">
+<li><span class="parameter">side</span> - <span class="parameter-type">string</span>. Panel to open: "left" or "right". Required in case you have two panels.</li>
+<li><span class="parameter">animate</span> - <span class="parameter-type">boolean</span>. Should it be opened with animation or not. Optional, by default is <code>true</code></li>
+</ul>
+</div>
+<div class="method-wrap">
+<p><span class="method">app.panel.close(<span>side, animate</span>)</span>- close panel</p>
+<ul class="method-parameters">
+<li><span class="parameter">side</span> - <span class="parameter-type">string</span>. Panel to close. Optional, by default will close any opened panel.</li>
+<li><span class="parameter">animate</span> - <span class="parameter-type">boolean</span>. Should it be opened with animation or not. Optional, by default is <code>true</code></li>
+</ul>
+</div>
+<div class="method-wrap">
+<p><span class="method">app.panel.create(<span>parameters</span>)</span>- create new panel instance</p>
+<ul class="method-parameters">
+<li><span class="parameter">parameters</span> - <span class="parameter-type">object</span>. Object with panel parameters.</li>
+</ul>
+<p class="method-returns">Method returns created Panel instance</p>
+<div class="important-note">Use this method only in case you have added panel to DOM after app initialization. Otherwise it will be created automatically</div>
+</div>
+<div class="method-wrap">
+<p><span class="method">app.panel.get(<span>side</span>)</span>- get Panel instance by specified side</p>
+<ul class="method-parameters">
+<li><span class="parameter">side</span> - <span class="parameter-type">string</span>. Panel to get</li>
+</ul>
+<p class="method-returns">Method returns Panel instance</p>
+</div>
+<div class="method-wrap">
+<p><span class="method">app.panel.enableSwipe(<span>side</span>)</span>- enable swipes for panel (swipe-to-close and swipe-to-open)</p>
+<ul class="method-parameters">
+<li><span class="parameter">side</span> - <span class="parameter-type">string</span>. Panel to enable swipe actions on</li>
+</ul>
+</div>
+<div class="method-wrap">
+<p><span class="method">app.panel.disableSwipe(<span>side</span>)</span>- disable swipes for panel (swipe-to-close and swipe-to-open)</p>
+<ul class="method-parameters">
+<li><span class="parameter">side</span> - <span class="parameter-type">string</span>. Panel to disable swipe actions on</li>
+</ul>
+</div>
+<div class="method-wrap">
+<p><span class="method">app.panel.left</span>- left panel instance</p>
+</div>
+<div class="method-wrap">
+<p><span class="method">app.panel.right</span>- right panel instance</p>
+</div>
+<h2>Panel Parameters</h2>
+<p>If we create Panel manually using <code>app.panel.create</code> method we need to pass object with panel parameters:</p>
+<table class="params-table">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>el</td>
+<td>HTMLElement</td>
+<td></td>
+<td>Panel element</td>
+</tr>
+<tr>
+<td>side</td>
+<td>string</td>
+<td></td>
+<td>Can be <code>left</code> or <code>right</code>. If not passed then will be determined based on <code>panel-left</code> or <code>panel-right</code> element classes</td>
+</tr>
+<tr>
+<td>effect</td>
+<td>string</td>
+<td></td>
+<td>Can be <code>cover</code> or <code>reveal</code>. If not passed then will be determined based on <code>panel-cover</code> or <code>panel-reveal</code> element classes</td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p><pre><code class="js"><span class="token keyword">var</span> panel <span class="token operator">=</span> app<span class="token punctuation">.</span>panel<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  el<span class="token punctuation">:</span> <span class="token string">'.panel-left'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</pre></code>
+<h2>Panel Methods & Properties</h2>
+<p>After we created Panel instance (by calling <code>app.panel.create</code>) or after we got Panel instance (by calling <code>app.panel.get</code>) we may use its useful methods and properties:</p>
+<table class="methods-table">
+<tbody>
+<tr>
+<th colspan="2">Properties</th>
+</tr>
+<tr>
+<td>panel.app</td>
+<td>Link to global app instance</td>
+</tr>
+<tr>
+<td>panel.side</td>
+<td>String with panel side: <code>left</code> or <code>right</code></td>
+</tr>
+<tr>
+<td>panel.effect</td>
+<td>String with panel effect: <code>cover</code> or <code>reveal</code></td>
+</tr>
+<tr>
+<td>panel.opened</td>
+<td>Boolean property indicating whether it is opened or not</td>
+</tr>
+<tr>
+<td>panel.el</td>
+<td>Panel HTML element</td>
+</tr>
+<tr>
+<td>panel.$el</td>
+<td>Dom7 instance with panel HTML element</td>
+</tr>
+<tr>
+<td>panel.backdropEl</td>
+<td>Backdrop HTML element</td>
+</tr>
+<tr>
+<td>panel.$backdropEl</td>
+<td>Dom7 instance with backdrop HTML element</td>
+</tr>
+<tr>
+<td>panel.params</td>
+<td>Popup parameters</td>
+</tr>
+<tr>
+<th colspan="2">Methods</th>
+</tr>
+<tr>
+<td>panel.open(<span>animate</span>)</td>
+<td>Open panel. Where
+<ul class="method-parameters">
+<li><span class="parameter">animate</span> - <span class="parameter-type">boolean</span> (by default <code>true</code>) - defines whether it should be opened with animation or not</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>panel.close(<span>animate</span>)</td>
+<td>Close panel. Where
+<ul class="method-parameters">
+<li><span class="parameter">animate</span> - <span class="parameter-type">boolean</span> (by default <code>true</code>) - defines whether it should be closed with animation or not</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>panel.destroy()</td>
+<td>Destroy panel instance</td>
+</tr>
+<tr>
+<td>panel.on(<span>event</span>, <span>handler</span>)</td>
+<td>Add event handler</td>
+</tr>
+<tr>
+<td>panel.once(<span>event</span>, <span>handler</span>)</td>
+<td>Add event handler that will be removed after it was fired</td>
+</tr>
+<tr>
+<td>panel.off(<span>event</span>, <span>handler</span>)</td>
+<td>Remove event handler</td>
+</tr>
+<tr>
+<td>panel.off(<span>event</span>)</td>
+<td>Remove all handlers for specified event</td>
+</tr>
+<tr>
+<td>panel.emit(<span>event</span>, <span>...args</span>)</td>
+<td>Fire event on instance</td>
+</tr>
+</tbody>
+</table>
+<h2>Control Panel With Links</h2>
+<p>It is possible to open and close required panel (if you have them in DOM) using special classes and data attributes on links:</p>
+<div class="important-note">
+<ul>
+<li>
+<p>To open panel we need to add <code><b>panel-open</b></code> class to any HTML element (prefered to link)</p>
+</li>
+<li>
+<p>To close panel we need to add <code><b>panel-close</b></code> class to any HTML element (prefered to link)</p>
+</li>
+<li>
+<p>If you have two panels in app, such link will open/close Left panel by default</p>
+</li>
+<li>
+<p>If you want to specify which panel should opened/closed, then it could be done via additional <code><b>data-panel="left</b></code> attribute on this HTML element</p>
+</li>
+</ul>
+</div>
+<p>According to above note:</p><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- Left Panel with Reveal effect --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel panel-left panel-reveal<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content-block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        ...
+        <span class="token comment">&lt;!-- Clicking on link with "panel-close" class will close panel --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel-close<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Close me<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+        <span class="token comment">&lt;!-- Click on link with "panel-open" and data-panel="right" attribute will open Right panel --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">data-panel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>right<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel-close<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Open Right Panel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+    <span class="token comment">&lt;!-- Right Panel with Cover effect --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel panel-right panel-cover<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content-block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        ...
+        <span class="token comment">&lt;!-- Click on link with "panel-close" class will close panel --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel-close<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Close me<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+        <span class="token comment">&lt;!-- Click on link with "panel-open" and data-panel="left" attribute will open Left panel --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">data-panel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>left<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel-open<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Open Left Panel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+    ...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content-block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token comment">&lt;!-- If no data-panel attribute, Left panel will be opened by default --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel-open<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Open Left Panel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+        <span class="token comment">&lt;!-- Click on link with "panel-open" and data-panel="right" attribute will open Right panel --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">data-panel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>right<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel-open<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Open Right Panel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></pre></code>
+<h2>Routable Panels</h2>
+<div class="important-note">
+<p><b>Routable Panels available from Framework7 version 3.2.0.</b></p>
+</div>
+<p>Panels can also be routable with same features as for routable modals and pages:</p>
+<ul>
+<li>it provides opportunity to open Panel by usual links instead of so called special links or API,</li>
+<li>with enabled Push State, the same Panel will be opened when you refresh browser, navigate back and forward in history,</li>
+<li>with routable Panels you can load Panel itself and its content in the same ways as for pages and modals, i.e. using <code>url</code>, <code>content</code>, <code>template</code>, <code>templateUrl</code>, <code>component</code> or <code>componentUrl</code></li>
+</ul><pre><code class="js">routes <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token operator">...</span>
+  <span class="token comment">// Creates Panel from passed HTML string</span>
+  <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> <span class="token string">'/left-panel/'</span><span class="token punctuation">,</span>
+    panel<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      content<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`
+        &lt;div class="panel panel-left panel-cover">
+          &lt;div class="view">
+            &lt;div class="page">
+              ...
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      `</span></span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// Load Panel from file via Ajax</span>
+  <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> <span class="token string">'/right-panel-ajax/'</span><span class="token punctuation">,</span>
+    panel<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      url<span class="token punctuation">:</span> <span class="token string">'./right-panel.html'</span><span class="token punctuation">,</span>
+      <span class="token comment">/* right-panel.html contains:
+      &lt;div class="panel panel-right panel-reveal">
+        &lt;div class="view">
+          &lt;div class="page">
+            ...
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+      */</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// Load Panel from component file</span>
+  <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> <span class="token string">'/panel-component/'</span><span class="token punctuation">,</span>
+    panel<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      componentUrl<span class="token punctuation">:</span> <span class="token string">'./panel-component.html'</span><span class="token punctuation">,</span>
+      <span class="token comment">/* panel-component.html contains:
+      &lt;template>
+        &lt;div class="panel panel-left panel-cover">
+          &lt;div class="view">
+            &lt;div class="page">
+              ...
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/template>
+      &lt;style>...&lt;/style>
+      &lt;script>...&lt;/script>
+      */</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span></pre></code>
+<p>According to example above:</p>
+<ul>
+<li>when you click on link with <code>/left-panel/</code> href attribute it will open Panel from specified string content,</li>
+<li>when you click on link with <code>/right-panel-ajax/</code> href attribute it will perform Ajax request to <code>right-panel.html</code> file and open it as a Right Panel,</li>
+<li>when you click on link with <code>/panel-component/</code> href attribute it will perform Ajax request to <code>panel-component.html</code> file, parse it as a Router Component and open it as a Panel,</li>
+</ul>
+<div class="important-note">
+<p>Note that <b>routable Panels can't be mixed with static Panels</b>. So if you have static left panel in the app, then only right panel can be loaded as routable panel.</p>
+</div>
+<h2>Panel Events</h2>
+<p>Panel will fire the following DOM events on panel element and events on app and panel instance:</p>
+<h3>DOM Events</h3>
+<table class="events-table">
+<thead>
+<tr>
+<th>Event</th>
+<th>Target</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>panel:open</td>
+<td>Panel Element<span>&lt;div class="panel"&gt;</span></td>
+<td>Event will be triggered when Panel starts its opening animation</td>
+</tr>
+<tr>
+<td>panel:opened</td>
+<td>Panel Element<span>&lt;div class="panel"&gt;</span></td>
+<td>Event will be triggered after Panel completes its opening animation</td>
+</tr>
+<tr>
+<td>panel:close</td>
+<td>Panel Element<span>&lt;div class="panel"&gt;</span></td>
+<td>Event will be triggered when Panel starts its closing animation</td>
+</tr>
+<tr>
+<td>panel:closed</td>
+<td>Panel Element<span>&lt;div class="panel"&gt;</span></td>
+<td>Event will be triggered after Panel completes its closing animation</td>
+</tr>
+<tr>
+<td>panel:backdrop-click</td>
+<td>Panel Overlay Element<span>&lt;div class="panel-backdrop"&gt;</span></td></td>
+<td>Event will be triggered when the panel overlay is clicked</td>
+</tr>
+<tr>
+<td>panel:swipeopen</td>
+<td>Panel Element<span>&lt;div class="panel"&gt;</span></td>
+<td>Event will be triggered in the very beginning of opening it with swipe</td>
+</tr>
+<tr>
+<td>panel:swipe</td>
+<td>Panel Element<span>&lt;div class="panel"&gt;</span></td>
+<td>Event will be triggered for swipe panel during touch swipe action</td>
+</tr>
+<tr>
+<td>panel:breakpoint</td>
+<td>Panel Element<span>&lt;div class="panel"&gt;</span></td>
+<td>Event will be triggered when it becomes visible/hidden when app width matches its breakpoint</td>
+</tr>
+<tr>
+<td>panel:beforedestroy</td>
+<td>Panel Element<span>&lt;div class="panel"&gt;</span></td>
+<td>Event will be triggered right before Panel instance will be destroyed</td>
+</tr>
+</tbody>
+</table>
+<h3>App and Panel Instance Events</h3>
+<p>Panel instance emits events on both self instance and app instance. App instance events has same names prefixed with <code>panel</code>.</p>
+<table class="events-table double-events-table">
+<thead>
+<tr>
+<th>Event</th>
+<th>Target</th>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>open</td>
+<td>panel</td>
+<td><span>(panel)</span></td>
+<td rowspan="2">Event will be triggered when Panel starts its opening animation. As an argument event handler receives panel instance</td>
+</tr>
+<tr>
+<td>panelOpen</td>
+<td>app</td>
+<td><span>(panel)</span></td>
+</tr>
+<tr>
+<td>opened</td>
+<td>panel</td>
+<td><span>(panel)</span></td>
+<td rowspan="2">Event will be triggered when Panel completes its opening animation. As an argument event handler receives panel instance</td>
+</tr>
+<tr>
+<td>panelOpened</td>
+<td>app</td>
+<td><span>(panel)</span></td>
+</tr>
+<tr>
+<td>close</td>
+<td>panel</td>
+<td><span>(panel)</span></td>
+<td rowspan="2">Event will be triggered when Panel starts its closing animation. As an argument event handler receives panel instance</td>
+</tr>
+<tr>
+<td>panelClose</td>
+<td>app</td>
+<td><span>(panel)</span></td>
+</tr>
+<tr>
+<td>closed</td>
+<td>panel</td>
+<td><span>(panel)</span></td>
+<td rowspan="2">Event will be triggered when Panel completes its closing animation. As an argument event handler receives panel instance</td>
+</tr>
+<tr>
+<td>panelClosed</td>
+<td>app</td>
+<td><span>(panel)</span></td>
+</tr>
+<tr>
+<td>backdropClick</td>
+<td>panel</td>
+<td><span>(panel)</span></td>
+<td rowspan="2">Event will be triggered when the panel backdrop is clicked. As an argument event handler receives panel instance</td>
+</tr>
+<tr>
+<td>panelBackdropClick</td>
+<td>app</td>
+<td><span>(panel)</span></td>
+</tr>
+<tr>
+<td>swipeOpen</td>
+<td>panel</td>
+<td><span>(panel)</span></td>
+<td rowspan="2">Event will be triggered in the very beginning of opening it with swipe. As an argument event handler receives panel instance</td>
+</tr>
+<tr>
+<td>panelSwipeOpen</td>
+ <td>app</td>
+<td><span>(panel)</span></td>
+</tr>
+<tr>
+<td>swipe</td>
+<td>panel</td>
+<td><span>(panel, progress)</span></td>
+<td rowspan="2">Event will be triggered for swipe panel during touch swipe action. As an argument event handler receives panel instance and opened progress (from 0 to 1)</td>
+</tr>
+<tr>
+<td>panelSwipe</td>
+<td>app</td>
+<td><span>(panel, progress)</span></td>
+</tr>
+<tr>
+<td>breakpoint</td>
+<td>panel</td>
+<td><span>(panel)</span></td>
+<td rowspan="2">Event will be triggered when it becomes visible/hidden when app width matches its breakpoint. As an argument event handler receives panel instance</td>
+</tr>
+<tr>
+<td>panelBreakpoint</td>
+<td>app</td>
+<td><span>(panel)</span></td>
+</tr>
+<tr>
+<td>beforeDestroy</td>
+<td>panel</td>
+<td><span>(panel)</span></td>
+<td rowspan="2">Event will be triggered right before Panel instance will be destroyed</td>
+</tr>
+<tr>
+<td>panelBeforeDestroy</td>
+<td>app</td>
+<td><span>(panel)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="with-device">
+<h2 data-device-preview="../docs-demos/core/panel.html">Examples</h2><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel panel-left panel-reveal<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Left Panel content here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel-close<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Close me<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel-open<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">data-panel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>right<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Open Right Panel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel panel-right panel-cover<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Right Panel content here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel-close<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Close me<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel-open<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">data-panel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>left<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Open Left Panel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>view view-main view-init<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar-inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>left<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Panels<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>right<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel-open<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Open Left Panel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>panel-open<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">data-panel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>right<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Open Right Panel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></pre></code><pre><code class="js"><span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Framework7</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> $$ <span class="token operator">=</span> Dom7<span class="token punctuation">;</span>
+
+<span class="token comment">// Dom Events</span>
+<span class="token function">$$</span><span class="token punctuation">(</span><span class="token string">'.panel-left'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'panel:open'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Panel left: open'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">$$</span><span class="token punctuation">(</span><span class="token string">'.panel-left'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'panel:opened'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Panel left: opened'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Instance Events</span>
+<span class="token keyword">var</span> panelRight <span class="token operator">=</span> app<span class="token punctuation">.</span>panel<span class="token punctuation">.</span>right<span class="token punctuation">;</span>
+panelRight<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'open'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Panel right: open'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+panelRight<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'opened'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Panel right: opened'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// App Events</span>
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'panelClose'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>panel<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Panel '</span> <span class="token operator">+</span> panel<span class="token punctuation">.</span>side <span class="token operator">+</span> <span class="token string">': close'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'panelClosed'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>panel<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Panel '</span> <span class="token operator">+</span> panel<span class="token punctuation">.</span>side <span class="token operator">+</span> <span class="token string">': closed'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></code>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+<script src="//cdn.framework7.io/js/jquery-1.11.0.min.js"></script>
+<script src="//cdn.framework7.io/js/main.js"></script>
+<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-74282934-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+<script>
+      (function(){
+        var bsa = document.createElement('script');
+           bsa.type = 'text/javascript';
+           bsa.async = true;
+           bsa.src = '//s3.buysellads.com/ac/bsa.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+      })();
+    </script>
+<script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+<script>
+      (function(){
+        if(typeof _bsa !== 'undefined' && _bsa) {
+        _bsa.init('default', 'CKYD627I', 'placement:framework7io', {
+          target: '.bsa-cpc',
+          align: 'horizontal',
+          disable_css: 'true'
+        });
+          }
+      })();
+    </script>
+
+
+
