@@ -1,0 +1,770 @@
+
+<style>
+  .content {
+  color : #a5a8a9;
+line-height: 1.6;
+margin: 2em auto;
+ font-family: "David Libre", serif;
+background-color : #fafafa;
+background-repeat : repeat-x;
+background-position : 50% top;
+margin-top : 1px;
+margin-bottom : 1px;
+padding : 16px;
+width : 900px;
+border : 1px solid #d9d9d9;
+}
+  </style>
+  
+
+  <link rel="stylesheet" href="//cdn.framework7.io/css/normalize.css">
+<link rel="stylesheet" href="//cdn.framework7.io/css/main.css">
+<link rel="shortcut icon" href="/i/favicon.png">
+<script src="//cdn.framework7.io/js/modernizr-2.7.1.min.js"></script>
+<title>Button</title>
+<div class="content">
+    <a href="index.html"> <img src="logo.png"></a> <div class="improve-docs-link"><small>Version: semelekete</small></div>
+<hr/>
+
+
+
+
+
+
+
+<main>
+<div class="center">
+<div class="docs-demo-device docs-demo-device-ios">
+<div class="docs-demo-device-buttons"><a class="active" data-theme="ios">iOS</a><a data-theme="md">Android</a></div>
+<div class="docs-demo-device-iframe">
+<iframe width="320" height="548" frameborder="0" scrolling="on"></iframe>
+<div class="fade-overlay"></div>
+</div>
+<div class="docs-demo-device-android-buttons">
+<div class="triangle"></div>
+<div class="circle"></div>
+<div class="square"></div>
+</div>
+ </div>
+
+<div class="docs-content">
+<div class="improve-docs-link"><a href="../../external.html?link=https://github.com/framework7io/framework7-website/edit/master/src/pug/docs/searchbar.pug" target="_blank">Improve this Doc</a></div>
+<h1>Searchbar</h1>
+<ul class="docs-index"></ul>
+<p>Searchbar allows user to search through <a href="list-view.html">List View</a> elements. Or it can be used as a visual UI component for your custom search realization.</p>
+<h2>Searchbar Layout</h2><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-backdrop<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-input-wrap<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Search<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-icon<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>input-clear-button<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-disable-button<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Cancel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span></pre></code>
+<p>Where:</p>
+<ul>
+<li><code><b>&lt;div class="searchbar-input-wrap"&gt;</b></code> - wrapper for search field and clear button
+<ul>
+<li><code><b>&lt;input type="search"&gt;</b></code> - search field</li>
+<li><code><b>&lt;i class="searchbar-icon"&gt;</b></code> - search icon</li>
+<li><code><b>&lt;span class="input-clear-button"&gt;</b></code> - button to clear field value and reset search results. Optional element</li>
+</ul>
+</li>
+<li><code><b>&lt;span class="searchbar-disable-button"&gt;</b></code> - Searchbar "Cancel" button that will deactivate Searchbar, reset search results and clear search field. Optional element</li>
+<li><code><b>&lt;div class="searchbar-backdrop"&gt;</b></code> - semi transparent searchbar backdrop that becomes visible when we enable searchbar. It is recommended to place this element inside of scrollable page's <code>page-content</code></li>
+</ul>
+<h2>Searchbar Type</h2>
+<p>Now let's see where we can place Searchbar in page structure. There are few options:</p>
+<h3>Fixed Searchbar</h3>
+<p>Fixed Searchbar is always visible on screen not depending on page scroll. In this case it must be placed according to one of the following rules:</p>
+<ul>
+<li>
+It can be a direct child of page and if page has also fixed Navbar and/or Toolbar then it must be AFTER Navbar and Toolbar:<pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>toolbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token comment">&lt;!-- Searchbar goes after Navbar and Toolbar --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- Searchbar backdrop layer --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-backdrop<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- page content here --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></pre></code>
+</li>
+<li>
+It can be placed inside of Subnavbar which is inside of the Navbar (recommended way):<pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page page-with-subnavbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar-inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      ...
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>subnavbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token comment">&lt;!-- Searchbar inside of Subnavbar --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- Searchbar backdrop layer --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-backdrop<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- page content here --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></pre></code>
+</li>
+</ul>
+<h3>Static Searchbar</h3>
+<p>In this case Searchbar is just part of the scrollable page content:</p><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- Searchbar backdrop layer --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-backdrop<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- Searchbar is part of scrollable page content --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- page content here --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></pre></code>
+<h3>Expandable Searchbar</h3>
+<p>Expandable Searchbar is hidden when disabled and becomes visible when we enable it. Its layout is pretty strict, it must be placed inside of Navbar:</p><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar-inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>left<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>right<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token comment">&lt;!-- Link to enable searchbar --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>link icon-only searchbar-enable<span class="token punctuation">"</span></span> <span class="token attr-name">data-searchbar</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>.searchbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon f7-icons ios-only<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>search_strong<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon material-icons md-only<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>search<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+      <span class="token comment">&lt;!-- Searchbar is a direct child of "navbar-inner" --></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar searchbar-expandable<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-input-wrap<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Search<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-icon<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>input-clear-button<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-disable-button<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Cancel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token comment">&lt;!-- Scrollable page content --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</pre></code>
+<p>Where:</p>
+<ul>
+<li><code><b>&lt;a class="link icon-only searchbar-enable" data-searchbar=".searchbar"&gt;</b></code> - link to enable/expand Searchbar. Optional or can be placed in any other place. <code><b>data-searchbar</b></code> attribute contains CSS selector of Searchbar to enable.</li>
+<li>Searchbar has additional <code><b>searchbar-expandable</b></code> class. It is required for expandable Searchbar to work</li>
+</ul>
+<h2>Searchbar Behavior Classes</h2>
+<p>There are also several CSS classes that can be added to elements that will define their behavior when Searchbar is active:</p>
+<ul>
+<li><code><b>searchbar-hide-on-enable</b></code> - elements with such class on page will be hidden when searchbar is enabled</li>
+<li><code><b>searchbar-hide-on-search</b></code> - elements with such class on page will be hidden during search</li>
+<li><code><b>searchbar-not-found</b></code> - elements with such class are hidden by default and become visible when there is no any search results</li>
+<li><code><b>searchbar-found</b></code> - elements with such class are visible by default and become hidden when there is no any search results</li>
+<li><code><b>searchbar-ignore</b></code> - searchbar will not consider this elements in search results</li>
+</ul>
+<p>For example:</p><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-backdrop<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+
+    <span class="token comment">&lt;!-- Following block title and block will be hidden on search --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block-title searchbar-hide-on-search<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Some block title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem ipsum dolor sit amet...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+    <span class="token comment">&lt;!-- We do search in super heroes list so the following title and list must be visible on search --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block-title searchbar-found<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Super Heroes<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>list simple-list searchbar-found<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Hulk<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Batman<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Superman<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        ...
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+    <span class="token comment">&lt;!-- This list will be visible when there is no any search results --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>list simple-list searchbar-not-found<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Nothing found<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</pre></code>
+<h2>Searchbar App Methods</h2>
+<p>Now, when we have Searchbar' HTML, we need to initialize it. We need to use related App's method:</p>
+<table class="methods-table">
+<tbody>
+<tr>
+<td>app.searchbar.create(<span>parameters</span>)</td>
+<td>Initialize Searchbar with parameters
+<ul class="method-parameters">
+<li><span class="parameter">parameters</span> - <span class="parameter-type">object</span> - object with Searchbar parameters</li>
+<li class="method-returns">Method returns initialized Searchbar instance</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>app.searchbar.destroy(<span>el</span>)</td>
+<td>Destroy Searchbar instance
+<ul class="method-parameters">
+<li><span class="parameter">el</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector) or <span class="parameter-type">object</span>. Searchbar element or Searchbar instance to destroy.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>app.searchbar.get(<span>el</span>)</td>
+<td>Get Searchbar instance by HTML element
+<ul class="method-parameters">
+<li><span class="parameter">el</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector). Searchbar element.</li>
+<li class="method-returns">Method returns Searchbar's instance</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>app.searchbar.clear(<span>el</span>)</td>
+<td>Clear Searchbar text input
+<ul class="method-parameters">
+<li><span class="parameter">el</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector). Searchbar element.</li>
+<li class="method-returns">Method returns Searchbar's instance</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>app.searchbar.enable(<span>el</span>)</td>
+<td>Enable Searchbar
+<ul class="method-parameters">
+<li><span class="parameter">el</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector). Searchbar element.</li>
+<li class="method-returns">Method returns Searchbar's instance</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>app.searchbar.disable(<span>el</span>)</td>
+<td>Disable Searchbar
+<ul class="method-parameters">
+<li><span class="parameter">el</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector). Searchbar element.</li>
+<li class="method-returns">Method returns Searchbar's instance</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>app.searchbar.toggle(<span>el</span>)</td>
+<td>Toggle Searchbar: enable if it was disabled, or disable if it was enabled
+<ul class="method-parameters">
+<li><span class="parameter">el</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector). Searchbar element.</li>
+<li class="method-returns">Method returns Searchbar's instance</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>app.searchbar.search(<span>el</span>, <span>query</span>)</td>
+<td>get Searchbar instance by HTML element
+<ul class="method-parameters">
+<li><span class="parameter">el</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector). Searchbar element.</li>
+<li class="method-returns">Method returns Searchbar's instance</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Searchbar Parameters</h2>
+<p>Let's look on list of all available parameters we need to create/init Searchbar:</p>
+<table class="params-table">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>el</td>
+<td>string<br>HTMLElement</td>
+<td></td>
+<td>CSS selector or HTML element of searchbar element (<code>form class="searchbar"</code>)</td>
+</tr>
+<tr>
+<td>inputEl</td>
+<td>string<br>HTMLElement</td>
+<td></td>
+<td>CSS selector or HTML element of searchbar input element. By default (if not passed) will try to look for <code>input type="search"</code> inside of searchbar</td>
+</tr>
+<tr>
+<td>disableButton</td>
+<td>boolean</td>
+<td>true</td>
+<td>Enables disable button</td>
+</tr>
+<tr>
+<td>disableButtonEl</td>
+<td>string<br>HTMLElement</td>
+<td></td>
+<td>CSS selector or HTML element of searchbar disable button. By default (if not passed) will try to look for element with <code>search-disable-button</code> class inside of searchbar</td>
+</tr>
+<tr>
+<td>searchContainer</td>
+<td>string<br>HTMLElement</td>
+<td></td>
+<td>CSS selector or HTML element of list block to search in</td>
+</tr>
+<tr>
+<td>searchIn</td>
+<td>string</td>
+<td></td>
+<td>CSS selector of List View element's field where we need to search. Usually we search through element titles, in this case we need to pass <code>.item-title</code>. It is also possible to pass few elements for search like <code>.item-title, .item-text</code></td>
+</tr>
+<tr>
+<td>searchItem</td>
+<td>string</td>
+<td>li</td>
+<td>CSS selector of single search item. If we do a search in List View, then it must be a single list element <code>li</code></td>
+</tr>
+<tr>
+<td>searchGroup</td>
+<td>string</td>
+<td>.list-group</td>
+<td>CSS selector of group element. Used when <code>hideGroups</code> enabled to hide groups. If we do a search in List View, then it usually a list group.</td>
+</tr>
+<tr>
+<td>searchGroupTitle</td>
+<td>string</td>
+<td>.list-group-title, .item-divider</td>
+<td>CSS selector of group titles and dividers. Used when <code>hideDividers</code> enabled to hide group titles and dividers. If we do a search in List View, then it usually a list group title or list item divider.</td>
+</tr>
+<tr>
+<td>foundEl</td>
+<td>string<br>HTMLElement</td>
+<td>.searchbar-found</td>
+<td>CSS selector or HTMLElement of searchbar "found" element to make it hidden when there is no search results</td>
+</tr>
+<tr>
+<td>notFoudEl</td>
+<td>string<br>HTMLElement</td>
+<td>.searchbar-not-found</td>
+<td>CSS selector or HTMLElement of searchbar "not-found" element to make it visible when there is no search results</td>
+</tr>
+<tr>
+<td>hideOnEnableEl</td>
+<td>string<br>HTMLElement</td>
+<td>.searchbar-hide-on-enable</td>
+<td>CSS selector or HTMLElement of elements to be hidden when searchbar enabled</td>
+</tr>
+<tr>
+<td>hideOnSearchEl</td>
+<td>string<br>HTMLElement</td>
+<td>.searchbar-hide-on-search</td>
+<td>CSS selector or HTMLElement of elements to be hidden on searchbar search</td>
+</tr>
+<tr>
+<td>backdrop</td>
+<td>boolean</td>
+<td>true</td>
+<td>Enables searchbar backdrop element</td>
+</tr>
+<tr>
+<td>backdropEl</td>
+<td>string<br>HTMLElement</td>
+<td></td>
+<td>CSS selector or HTMLElement of searchbar backdrop element. If not passed and <code>backdrop</code> parameter is <code>true</code> then it will look for <code>.searchbar-backdrop</code> element. In case none found it will create one automatically</td>
+</tr>
+<tr>
+<td>ignore</td>
+<td>string</td>
+<td>.searchbar-ignore</td>
+<td>CSS selector for items to be ignored by searchbar and always present in search results</td>
+</tr>
+<tr>
+<td>customSearch</td>
+<td>boolean</td>
+<td>false</td>
+<td>When enabled searchbar will not search through any of list blocks specified by <code>searchContainer</code> and you will be able to use custom search functionality, for example, for calling external APIs with search results and for displaying them manually</td>
+</tr>
+<tr>
+<td>removeDiacritics</td>
+<td>boolean</td>
+<td>false</td>
+<td>Enable to remove/replace diacritics (á, í, ó, etc.) during search</td>
+</tr>
+<tr>
+<td>hideDividers</td>
+<td>boolean</td>
+<td>true</td>
+<td>If enabled, then search will consider item dividers and group titles and hide them if there are no found items right after them</td>
+</tr>
+<tr>
+<td>hideGroups</td>
+<td>boolean</td>
+<td>true</td>
+<td>If enabled, then search will consider list view groups hide them if there are no found items inside of these groups</td>
+</tr>
+<tr>
+<td>on</td>
+<td>object</td>
+<td></td>
+<td>
+Object with events handlers. For example:<pre><code class="js"><span class="token keyword">var</span> searchbar <span class="token operator">=</span> app<span class="token punctuation">.</span>searchbar<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  el<span class="token punctuation">:</span> <span class="token string">'.searchbar'</span><span class="token punctuation">,</span>
+  on<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    enable<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Searchbar enabled'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></pre></code>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Searchbar Methods & Properties</h2>
+<p>So to create Popup we have to call:</p><pre><code class="js"><span class="token keyword">var</span> searchbar <span class="token operator">=</span> app<span class="token punctuation">.</span>searchbar<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token comment">/* parameters */</span> <span class="token punctuation">}</span><span class="token punctuation">)</span></pre></code>
+<p>After we initialize Searchbar we have its initialized instance in variable (like <code>searchbar</code> variable in example above) with helpful methods and properties:</p>
+<table class="methods-table">
+<tbody>
+<tr>
+<th colspan="2">Properties</th>
+</tr>
+<tr>
+<td>searchbar.params</td>
+<td>Object with passed initialization parameters</td>
+</tr>
+<tr>
+<td>searchbar.query</td>
+<td>Current search query (search input value)</td>
+</tr>
+<tr>
+<td>searchbar.previousQuery</td>
+<td>Previous search query (search input value)</td>
+</tr>
+<tr>
+<td>searchbar.searchContainer</td>
+<td>Searchbar search container</td>
+</tr>
+<tr>
+<td>searchbar.$searchContainer</td>
+<td>Dom7 element with searchbar search container</td>
+</tr>
+ <tr>
+<td>searchbar.el</td>
+<td>Searchbar HTML element.</td>
+</tr>
+<tr>
+<td>searchbar.$el</td>
+<td>Dom7 element with searchbar HTML element.</td>
+</tr>
+<tr>
+<td>searchbar.inputEl</td>
+<td>Searchbar input HTML element</td>
+</tr>
+<tr>
+<td>searchbar.$inputEl</td>
+<td>Dom7 element with searchbar input HTML element</td>
+</tr>
+<tr>
+<td>searchbar.enabled</td>
+<td>Boolean value that represents is searchbar enabled or disabled</td>
+</tr>
+<tr>
+<td>searchbar.expandable</td>
+<td>Boolean value that represents is searchbar expandable or not</td>
+</tr>
+<tr>
+<th colspan="2">Methods</th>
+</tr>
+<tr>
+<td>searchbar.search(<span>query</span>);</td>
+<td>Force searchbar to search passed query</td>
+</tr>
+<tr>
+<td>searchbar.enable();</td>
+<td>Enable/activate searchbar</td>
+</tr>
+<tr>
+<td>searchbar.disable();</td>
+<td>Disable/deactivate searchbar</td>
+</tr>
+<tr>
+<td>searchbar.toggle();</td>
+<td>Toggle searchbar</td>
+</tr>
+<tr>
+<td>searchbar.clear();</td>
+<td>Clear search query and update results</td>
+</tr>
+<tr>
+<td>searchbar.destroy();</td>
+<td>Destroy searchbar instance</td>
+</tr>
+<tr>
+<td>searchbar.on(<span>event</span>, <span>handler</span>)</td>
+<td>Add event handler</td>
+</tr>
+<tr>
+<td>searchbar.once(<span>event</span>, <span>handler</span>)</td>
+<td>Add event handler that will be removed after it was fired</td>
+</tr>
+<tr>
+<td>searchbar.off(<span>event</span>, <span>handler</span>)</td>
+<td>Remove event handler</td>
+</tr>
+<tr>
+<td>searchbar.off(<span>event</span>)</td>
+<td>Remove all handlers for specified event</td>
+</tr>
+<tr>
+<td>searchbar.emit(<span>event</span>, <span>...args</span>)</td>
+<td>Fire event on instance</td>
+</tr>
+</tbody>
+</table>
+<h2>Searchbar Events</h2>
+<p>Searchbar will fire the following DOM events on searchbar element and events on app and searchbar instance:</p>
+<h3>DOM Events</h3>
+<table class="events-table">
+<thead>
+<tr>
+<th>Event</th>
+<th>Target</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>searchbar:search</td>
+<td>Searchbar Element<span>&lt;form class="searchbar"&gt;</span></td>
+<td>Event will be triggered during search (search field change). Event detail (e.detail) contains search query</td>
+</tr>
+<tr>
+<td>searchbar:clear</td>
+<td>Searchbar Element<span>&lt;form class="searchbar"&gt;</span></td>
+<td>Event will be triggered when user clicks on Searchbar's "clear" element (a href="#" class="searchbar-clear"). Event detail (e.detail) contains previous (before clear) search query</td>
+</tr>
+<tr>
+<td>searchbar:enable</td>
+<td>Searchbar Element<span>&lt;form class="searchbar"&gt;</span></td>
+<td>Event will be triggered when Searchbar becomes active/enabled</td>
+</tr>
+<tr>
+<td>searchbar:disable</td>
+<td>Searchbar Element<span>&lt;form class="searchbar"&gt;</span></td>
+<td>Event will be triggered when Searchbar becomes disabled/inactive - when user clicks on "Cancel" button (a href="searchbar-cancel") or on "searchbar-overlay" element</td>
+</tr>
+<tr>
+<td>searchbar:beforedestroy</td>
+<td>Searchbar Element<span>&lt;form class="searchbar"&gt;</span></td>
+<td>Event will be triggered right before Searchbar instance will be destroyed</td>
+</tr>
+</tbody>
+</table>
+<h3>App and Searchbar Instance Events</h3>
+<p>Searchbar instance emits events on both self instance and app instance. App instance events has same names prefixed with <code>searchbar</code>.</p>
+<table class="events-table double-events-table">
+<thead>
+<tr>
+<th>Event</th>
+<th>Target</th>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>search</td>
+<td>searchbar</td>
+<td rowspan="2"><span>(searchbar, query, previousQuery)</span></td>
+<td rowspan="2">Event will be triggered during search (search field change). As an argument event handler receives searchbar instance, current query and previous query</td>
+</tr>
+<tr>
+<td>searchbarSearch</td>
+<td>app</td>
+</tr>
+<tr>
+<td>clear</td>
+<td>searchbar</td>
+<td rowspan="2"><span>(searchbar, previousQuery)</span></td>
+<td rowspan="2">Event will be triggered when user clicks on Searchbar's "clear" element . As an argument event handler receives searchbar instance and previous (before clear) query</td>
+</tr>
+<tr>
+<td>searchbarClear</td>
+<td>app</td>
+</tr>
+<tr>
+<td>enable</td>
+<td>searchbar</td>
+<td rowspan="2"><span>(searchbar)</span></td>
+<td rowspan="2">Event will be triggered when Searchbar becomes active/enabled. As an argument event handler receives searchbar instance</td>
+</tr>
+<tr>
+<td>searchbarEnable</td>
+<td>app</td>
+</tr>
+<tr>
+<td>disable</td>
+<td>searchbar</td>
+<td rowspan="2"><span>(searchbar)</span></td>
+<td rowspan="2">Event will be triggered when Searchbar becomes inactive/disabled. As an argument event handler receives searchbar instance</td>
+</tr>
+<tr>
+<td>searchbarDisable</td>
+<td>app</td>
+</tr>
+<tr>
+<td>beforeDestroy</td>
+<td>searchbar</td>
+<td rowspan="2"><span>(searchbar)</span></td>
+<td rowspan="2">Event will be triggered right before Searchbar instance will be destroyed</td>
+</tr>
+<tr>
+<td>searchbarBeforeDestroy</td>
+<td>app</td>
+</tr>
+</tbody>
+</table>
+<h2>Searchbar Auto Initialization</h2>
+<p>If you don't need to use Searchbar API and your Searchbar is inside of the page and presented in DOM on moment of page initialization then it can be auto initialized with just adding additional <code><b>searchbar-init</b></code> class to searchbar element, and all required parameters can be passed using <code><b>data-</b></code> attributes:</p><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-backdrop<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+    <span class="token comment">&lt;!-- Searchbar with "searchbar-init" class for auto initialization and searchContainer, searchIn parameters passed in data- attributes  --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar searchbar-init<span class="token punctuation">"</span></span> <span class="token attr-name">data-search-container</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>.search-here<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      ...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>list simple-list search-list searchbar-found<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Hulk<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Batman<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Superman<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        ...
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+    ...
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></pre></code>
+<div class="important-note">
+<p>Parameters that used in camelCase, for example <b>searchContainer</b>, in data- attributes should be used in kebab-case as <b>data-search-container</b></p>
+</div>
+<div class="with-device">
+<h2 data-device-preview="../docs-demos/core/searchbar.html"></h2><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar-inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Search Bar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>subnavbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token comment">&lt;!-- Searchbar with auto init --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-input-wrap<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Search<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-icon<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>input-clear-button<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-disable-button<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Cancel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- Searchbar backdrop --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchbar-backdrop<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- hide-on-search element --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block searchbar-hide-on-search<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>This block will be hidden on search. Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- search target list --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>list searchbar-found<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item-inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item-title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Acura<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item-inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item-title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Audi<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item-inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item-title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>BMW<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        ...
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item-inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item-title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Volvo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- Nothing found message --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block searchbar-not-found<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block-inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Nothing found<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></pre></code>
+</div><pre><code class="js"><span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Framework7</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// create searchbar</span>
+<span class="token keyword">var</span> searchbar <span class="token operator">=</span> app<span class="token punctuation">.</span>searchbar<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  el<span class="token punctuation">:</span> <span class="token string">'.searchbar'</span><span class="token punctuation">,</span>
+  searchContainer<span class="token punctuation">:</span> <span class="token string">'.list'</span><span class="token punctuation">,</span>
+  searchIn<span class="token punctuation">:</span> <span class="token string">'.item-title'</span><span class="token punctuation">,</span>
+  on<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token function">search</span><span class="token punctuation">(</span>sb<span class="token punctuation">,</span> query<span class="token punctuation">,</span> previousQuery<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>query<span class="token punctuation">,</span> previousQuery<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></code>
+</div>
+</div>
+</main>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+<script src="//cdn.framework7.io/js/jquery-1.11.0.min.js"></script>
+<script src="//cdn.framework7.io/js/main.js"></script>
+<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-74282934-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+<script>
+      (function(){
+        var bsa = document.createElement('script');
+           bsa.type = 'text/javascript';
+           bsa.async = true;
+           bsa.src = '//s3.buysellads.com/ac/bsa.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+      })();
+    </script>
+<script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+<script>
+      (function(){
+        if(typeof _bsa !== 'undefined' && _bsa) {
+        _bsa.init('default', 'CKYD627I', 'placement:framework7io', {
+          target: '.bsa-cpc',
+          align: 'horizontal',
+          disable_css: 'true'
+        });
+          }
+      })();
+    </script>
+
+
+
