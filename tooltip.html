@@ -1,0 +1,401 @@
+
+
+<style>
+  .content {
+  color : #a5a8a9;
+line-height: 1.6;
+margin: 2em auto;
+ font-family: "David Libre", serif;
+background-color : #fafafa;
+background-repeat : repeat-x;
+background-position : 50% top;
+margin-top : 1px;
+margin-bottom : 1px;
+padding : 16px;
+width : 900px;
+border : 1px solid #d9d9d9;
+}
+  </style>
+  
+
+  <link rel="stylesheet" href="//cdn.framework7.io/css/normalize.css">
+<link rel="stylesheet" href="//cdn.framework7.io/css/main.css">
+<link rel="shortcut icon" href="/i/favicon.png">
+<script src="//cdn.framework7.io/js/modernizr-2.7.1.min.js"></script>
+<title>Button</title>
+<div class="content">
+    <a href="index.html"> <img src="logo.png"></a> <div class="improve-docs-link"><small>Version: semelekete</small></div>
+<hr/>
+
+
+
+
+
+<main>
+<div class="center">
+<div class="docs-demo-device docs-demo-device-ios">
+<div class="docs-demo-device-buttons"><a class="active" data-theme="ios">iOS</a><a data-theme="md">Android</a></div>
+<div class="docs-demo-device-iframe">
+<iframe width="320" height="548" frameborder="0" scrolling="on"></iframe>
+<div class="fade-overlay"></div>
+</div>
+<div class="docs-demo-device-android-buttons">
+<div class="triangle"></div>
+<div class="circle"></div>
+<div class="square"></div>
+</div>
+ </div>
+
+<div class="docs-content">
+<div class="improve-docs-link"><a href="../../external.html?link=https://github.com/framework7io/framework7-website/edit/master/src/pug/docs/tooltip.pug" target="_blank">Improve this Doc</a></div>
+<h1>Tooltip</h1>
+<ul class="docs-index"></ul>
+<p>Tooltips display informative text when users hover over, or tap an target element.</p>
+<p>Tooltip can be positioned around any element with any HTML content inside.</p>
+<h2>Tooltip Layout</h2>
+<p>Tooltip is a JavaScript-only component, it doesn't have any HTML layout.</p>
+<h2>Tooltip App Methods</h2>
+<p>We need to create/initialize the Tooltip. Let's look at related App methods to work with Tooltip:</p>
+<div class="method-wrap">
+<p><span class="method">app.tooltip.create(<span>parameters</span>)</span>- create Tooltip instance</p>
+<ul class="method-parameters">
+<li><span class="parameter">parameters</span> - <span class="parameter-type">object</span>. Object with tooltip parameters</li>
+</ul>
+<p class="method-returns">Method returns created Tooltip instance</p>
+</div>
+<div class="method-wrap">
+<p><span class="method">app.tooltip.destroy(<span>targetEl</span>)</span>- destroy Tooltip instance</p>
+<ul class="method-parameters">
+<li><span class="parameter">targetEl</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector) or <span class="parameter-type">object</span> (instance). Tooltip element or Tooltip instance to destroy.</li>
+</ul>
+</div>
+<div class="method-wrap">
+<p><span class="method">app.tooltip.get(<span>targetEl</span>)</span>- get Tooltip instance by its target HTML element</p>
+<ul class="method-parameters">
+<li><span class="parameter">targetEl</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector). Tooltip target element.</li>
+</ul>
+<p class="method-returns">Method returns Tooltip instance</p>
+</div>
+<div class="method-wrap">
+<p><span class="method">app.tooltip.show(<span>targetEl</span>)</span>- show Tooltip</p>
+<ul class="method-parameters">
+<li><span class="parameter">targetEl</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector). Tooltip target element.</li>
+</ul>
+<p class="method-returns">Method returns Tooltip instance</p>
+</div>
+<div class="method-wrap">
+<p><span class="method">app.tooltip.hide(<span>targetEl</span>)</span>- hide Tooltip</p>
+<ul class="method-parameters">
+<li><span class="parameter">el</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector). Tooltip target element.</li>
+</ul>
+<p class="method-returns">Method returns Tooltip instance</p>
+</div>
+<div class="method-wrap">
+<p><span class="method">app.tooltip.setText(<span>targetEl</span>, <span>text</span>)</span>- change Tooltip text</p>
+<ul class="method-parameters">
+<li><span class="parameter">el</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector). Tooltip target element.</li>
+<li><span class="parameter">text</span> - <span class="parameter-type">string</span> - new text to set in specified Tooltip.</li>
+</ul>
+<p class="method-returns">Method returns Tooltip instance</p>
+</div>
+<h2>Tooltip Parameters</h2>
+<p>Now let's look at list of available parameters we need to create Tooltip:</p>
+<table class="params-table">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>targetEl</td>
+<td>HTMLElement<br>string</td>
+<td></td>
+<td>Tooltip target element. Tooltip will be shown around this element. HTMLElement or string with CSS selector of tooltip target element</td>
+</tr>
+<tr>
+<td>text</td>
+<td>string</td>
+<td></td>
+<td>Tooltip text or HTML content</td>
+</tr>
+<tr>
+<td>cssClass</td>
+<td>string</td>
+<td></td>
+<td>Additional css class will be added to Tooltip element. Can be used for additional tooltip styling</td>
+</tr>
+<tr>
+<td>render</td>
+<td>function (tooltip)</td>
+<td></td>
+<td>Function to render tooltip element, must return full tooltip HTML layout string</td>
+</tr>
+<tr>
+<td>on</td>
+<td>object</td>
+<td></td>
+<td>
+Object with events handlers. For example:<pre><code class="js"><span class="token keyword">var</span> tooltip <span class="token operator">=</span> app<span class="token punctuation">.</span>tooltip<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  targetEl<span class="token punctuation">:</span> <span class="token string">'.some-link'</span>
+  on<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    show<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Tooltip became visible'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</pre></code>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Tooltip Methods & Properties</h2>
+<p>So to create Tooltip we have to call:</p><pre><code class="js"><span class="token keyword">var</span> tooltip <span class="token operator">=</span> app<span class="token punctuation">.</span>tooltip<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token comment">/* parameters */</span> <span class="token punctuation">}</span><span class="token punctuation">)</span></pre></code>
+<p>After that we have its initialized instance (like <code>tooltip</code> variable in example above) with useful methods and properties:</p>
+<table class="methods-table">
+<tbody>
+<tr>
+<th colspan="2">Properties</th>
+</tr>
+<tr>
+<td>tooltip.app</td>
+<td>Link to global app instance</td>
+</tr>
+<tr>
+<td>tooltip.targetEl</td>
+<td>Tooltip target HTML element</td>
+</tr>
+<tr>
+<td>tooltip.$targetEl</td>
+<td>Dom7 instance with tooltip target HTML element</td>
+</tr>
+<tr>
+<td>tooltip.el</td>
+<td>Tooltip itself HTML element</td>
+</tr>
+<tr>
+<td>tooltip.$el</td>
+<td>Dom7 instance with tooltip HTML element</td>
+</tr>
+<tr>
+<td>tooltip.text</td>
+<td>Tooltip text/content</td>
+</tr>
+<tr>
+<td>tooltip.opened</td>
+<td>Boolean property indicating whether it is opened/visible or not</td>
+</tr>
+<tr>
+<td>tooltip.params</td>
+<td>Tooltip parameters</td>
+</tr>
+<tr>
+<th colspan="2">Methods</th>
+</tr>
+<tr>
+<td>tooltip.show(<span>targetEl</span>)</td>
+<td>Show tooltip around <code>targetEl</code> element. If <code>targetEl</code> is not specified, then it will use <code>targetEl</code> passed in parameters on initialization</td>
+</tr>
+<tr>
+<td>tooltip.hide()</td>
+<td>Hide tooltip</td>
+</tr>
+<tr>
+<td>tooltip.setText(<span>text</span>)</td>
+<td>Change tooltip text or HTML content to the new one</td>
+</tr>
+<tr>
+<td>tooltip.destroy()</td>
+<td>Destroys tooltip instance</td>
+</tr>
+<tr>
+<td>tooltip.on(<span>event</span>, <span>handler</span>)</td>
+<td>Add event handler</td>
+</tr>
+<tr>
+<td>tooltip.once(<span>event</span>, <span>handler</span>)</td>
+<td>Add event handler that will be removed after it was fired</td>
+</tr>
+<tr>
+<td>tooltip.off(<span>event</span>, <span>handler</span>)</td>
+<td>Remove event handler</td>
+</tr>
+<tr>
+<td>tooltip.off(<span>event</span>)</td>
+<td>Remove all handlers for specified event</td>
+</tr>
+<tr>
+<td>tooltip.emit(<span>event</span>, <span>...args</span>)</td>
+<td>Fire event on instance</td>
+</tr>
+</tbody>
+</table>
+<h2>Tooltip Events</h2>
+<p>Tooltip will fire the following DOM events on tooltip element and events on app and tooltip instance:</p>
+<h3>DOM Events</h3>
+<table class="events-table">
+<thead>
+<tr>
+<th>Event</th>
+<th>Target</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tooltip:show</td>
+<td>
+Tooltip Element<br>Tooltip Target</td>
+<td>Event will be triggered when Tooltip becomes visible</td>
+</tr>
+<tr>
+<td>tooltip:hide</td>
+<td>
+Tooltip Element<br>Tooltip Target</td>
+<td>Event will be triggered when Tooltip becomes hidden</td>
+</tr>
+<tr>
+<td>tooltip:beforedestroy</td>
+<td>
+Tooltip Element<br>Tooltip Target</td>
+<td>Event will be triggered right before Tooltip instance will be destroyed</td>
+</tr>
+</tbody>
+</table>
+<h3>App and Tooltip Instance Events</h3>
+<p>Tooltip instance emits events on both self instance and app instance. App instance events has same names prefixed with <code>tooltip</code>.</p>
+<table class="events-table double-events-table">
+<thead>
+<tr>
+<th>Event</th>
+<th>Arguments</th>
+<th>Target</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>show</td>
+<td><span>(tooltip)</span></td>
+<td>tooltip</td>
+<td rowspan="2">Event will be triggered when Tooltip becomes visible. As an argument event handler receives Tooltip instance</td>
+</tr>
+<tr>
+<td>tooltipShow</td>
+<td><span>(tooltip)</span></td>
+<td>app</td>
+</tr>
+<tr>
+<td>hide</td>
+<td><span>(tooltip)</span></td>
+<td>tooltip</td>
+<td rowspan="2">Event will be triggered when Tooltip becomes hidden. As an argument event handler receives Toolitp instance</td>
+</tr>
+<tr>
+<td>tooltipHide</td>
+<td><span>(tooltip)</span></td>
+<td>app</td>
+</tr>
+<tr>
+<td>beforeDestroy</td>
+<td><span>(tooltip)</span></td>
+<td>tooltip</td>
+<td rowspan="2">Event will be triggered right before Tooltip instance will be destroyed. As an argument event handler receives Tooltip instance</td>
+</tr>
+<tr>
+<td>tooltipBeforeDestroy</td>
+<td><span>(tooltip)</span></td>
+<td>app</td>
+</tr>
+</tbody>
+</table>
+<h2>Tooltip Auto Initialization</h2>
+<p>If you don't need to use Tooltip API and your Tooltip target element is inside of the page and presented in DOM on moment of page initialization then it can be auto initialized with just adding <code>tooltip-init</code> class to target element, and specifying tooltip text in its <code>data-tooltip</code> attribute:</p><pre><code class="html"><span class="token comment">&lt;!-- Add tooltip-init class and specify tooltip text in data-tooltip attribute --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/profile/<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>link tooltip-init profile-link<span class="token punctuation">"</span></span> <span class="token attr-name">data-tooltip</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Profile settings<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>profile-icon<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span></pre></code>
+<p>In this case if you need to access created Tooltip instance you can use the <code>app.tooltip.get</code> app method:</p><pre><code class="js"><span class="token keyword">var</span> tooltip <span class="token operator">=</span> app<span class="token punctuation">.</span>tooltip<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'.profile-link'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// change tooltip text</span>
+tooltip<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span><span class="token string">'Profile'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre></code>
+<div class="with-device">
+<h2 data-device-preview="../docs-demos/core/tooltip.html">Examples</h2><pre><code class="html"><span class="token comment">&lt;!-- navbar with link with tooltip --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar-inner sliding<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Tooltip<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>right<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>link navbar-tooltip<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon f7-icons if-ios<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>info<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon material-icons if-md<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>info_outline<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+...
+
+<span class="token comment">&lt;!-- icons with tooltip in text --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block block-strong<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia augue urna, in tincidunt augue hendrerit ut. In nulla massa, facilisis non consectetur a, tempus semper ex. Proin eget volutpat nisl. Integer lacinia maximus nunc molestie viverra. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon f7-icons color-blue icon-tooltip if-ios<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>info_fill<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon material-icons color-blue icon-tooltip if-md<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>info<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span> Etiam ullamcorper ultricies ipsum, ut congue tortor rutrum at. Vestibulum rutrum risus a orci dictum, in placerat leo finibus...
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+...
+
+<span class="token comment">&lt;!-- button with auto init tooltip --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button button-round button-outline button-small tooltip-init<span class="token punctuation">"</span></span> <span class="token attr-name">data-tooltip</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Button tooltip text<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Button with Tooltip<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span></pre></code><pre><code class="js"><span class="token comment">// icons tooltip. One tooltip for all icons with "icon-tooltip" class</span>
+<span class="token keyword">var</span> iconTooltip <span class="token operator">=</span> app<span class="token punctuation">.</span>tooltip<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  targetEl<span class="token punctuation">:</span> <span class="token string">'.icon-tooltip'</span><span class="token punctuation">,</span>
+  text<span class="token punctuation">:</span> <span class="token string">'Tooltip text'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// navbar link tooltip</span>
+<span class="token keyword">var</span> navbarTooltip <span class="token operator">=</span> app<span class="token punctuation">.</span>tooltip<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  targetEl<span class="token punctuation">:</span> <span class="token string">'.navbar-tooltip'</span><span class="token punctuation">,</span>
+  text<span class="token punctuation">:</span> <span class="token string">'One more tooltip&lt;br>with more text&lt;br>&lt;em>and custom formatting&lt;/em>'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></code>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+<script src="//cdn.framework7.io/js/jquery-1.11.0.min.js"></script>
+<script src="//cdn.framework7.io/js/main.js"></script>
+<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-74282934-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+<script>
+      (function(){
+        var bsa = document.createElement('script');
+           bsa.type = 'text/javascript';
+           bsa.async = true;
+           bsa.src = '//s3.buysellads.com/ac/bsa.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+      })();
+    </script>
+<script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+<script>
+      (function(){
+        if(typeof _bsa !== 'undefined' && _bsa) {
+        _bsa.init('default', 'CKYD627I', 'placement:framework7io', {
+          target: '.bsa-cpc',
+          align: 'horizontal',
+          disable_css: 'true'
+        });
+          }
+      })();
+    </script>
+
+
+
