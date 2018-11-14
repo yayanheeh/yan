@@ -1,3 +1,29 @@
+<style>
+  label{
+  padding: 22px; /*Untuk ukuran kotak label agar terlihat besar atau luas*/
+  background-color: #22b524;/*Membuat warna background menjadi hijau*/
+  font-size: 36px;/*Ukuran huruf semakin besar*/
+  color: #fff;/*warna huruf putih*/
+  font-weight: 900;/*mempertebal huruf*/
+  cursor: pointer;/*membuat pointer*/
+  margin-right: -5px;/*membuat label dan input menyatu atau tidak ada jarak*/
+}
+  </style>
+
+label:hover{
+  color: #fff; /*mengubah warna tombol search jika kursor di arahkan ke tombol tersebut*/
+  background-color: #3a963b;/*hover ini jika kita mengarahkan kursor kelabel akan berubah warna hijau tua*/
+}
+
+input{
+  padding: 22px;  /*Untuk ukuran kotak search agar terlihat besar atau luas*/
+  font-size: 36px; /*Ukuran huruf semakin besar*/
+  width: 800px;/*lebar kotak pencarian menjadi panjang */
+  border: none;/*border itu seperti bingkai. Border di nol kan atau dihilangkan. Terserah keinginan kamu*/
+  color: #4a4c4c;/*warna huruf ketika diketik abu-abu*/
+  outline: none;/*Outline seperti border cuma perbedaannya hanya pada saat kita mengarahkan kursor kearah kotak search maka akan muncul seperti border, jadi disini outline dihilangkan*/
+}
+
 
 <style>
 * {box-sizing: border-box;}
@@ -57,7 +83,8 @@ body {
 
 
 <div class="header"> <img src="lo-go.png"> 
- 
+ <label for="search">Search</label>
+<input type="search" type="text/css" placeholder="type anything...">
   <div class="header-right">
     <a class="active" href="#home">Home</a>
     <a href="#contact">Contact</a>
