@@ -64,6 +64,32 @@ body {
 .header-right {
   float: right;
 }
+	.topnav .search-container {
+  float: center;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: center;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
 
 @media screen and (max-width: 500px) {
   .header a {
@@ -79,8 +105,11 @@ body {
 
 
 
-<div class="header"> <img src="lo-go.png"> 
-&emsp;&emsp;
+<div class="header"> <img src="lo-go.png" width="30" height="30"> 
+<form action="/search.html">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
 
   <div class="header-right">
     <a class="active" href="#home">Home</a>
@@ -90,5 +119,5 @@ body {
     
   </div>
 </div>
-<div class="yayan"><br/><br/>
+<div class="yayan"><br/>
 &emsp;&emsp;<h2>&emsp;Introduction</h2><br/><br/><br/></div>
