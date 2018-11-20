@@ -1,3 +1,5 @@
+<html>
+	<head>
 <META NAME="Title" CONTENT="Yayan He'eh | Framework ios and Android">
 <META NAME="Keywords" CONTENT="Yayanheeh,framework,ios,android,opensource">
 <META NAME="Description" CONTENT="Yayan He'eh (framework)- adalah framework HTML seluler gratis dan open source untuk mengembangkan aplikasi seluler hibrida atau aplikasi web dengan tampilan dan nuansa asli iOS & Android.">
@@ -7,97 +9,50 @@
 
 <link rel="stylesheet" href="//cdn.framework7.io/css/normalize.css">
 <link rel="stylesheet" href="//cdn.framework7.io/css/main.css">
-<link rel="shortcut icon" href="/i/favicon.png">
 <script src="//cdn.framework7.io/js/modernizr-2.7.1.min.js"></script>
-<style>
-	
-#customers {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+	</head>
+<body>
 
-#customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
+<div w3-include-html="header.html"></div> 
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white;
-}
-</style>
-	
-	<style>
-      .content1 {
-  color : #a5a8a9;
-line-height: 1.6;
-margin: 2em auto;
- font-family: "David Libre", serif;
-background-color : #f4f4f4;
-background-repeat : repeat-x;
-background-position : 50% top;
-margin-top : 1px;
-margin-bottom : 1px;
-max-width: 900px;
-padding : 16px;
-border : 1px solid #d9d9d9;
-}
-		
-textarea {
-  margin-top: 10px;
-  margin-left: 10px;
-  width: 400px;
-  height: 200px;
-  -moz-border-bottom-colors: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
-  border-color: -moz-use-text-color #FFFFFF #FFFFFF -moz-use-text-color;
-  border-image: none;
-  border-radius: 6px 6px 6px 6px;
-  border-style: none solid solid none;
-  border-width: medium 1px 1px medium;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
-  color: #555555;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 1em;
-  line-height: 1.4em;
-  padding: 5px 8px;
-  transition: background-color 0.2s ease 0s;
-}
+<script>
+includeHTML();
+</script>
 
 
-textarea:focus {
-    background: none repeat scroll 0 0 #000000;
-    outline-width: 0;
-}
-      </style>
-	<style>
-.button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-</style>
 
-<div class="content1">
-<main>
+
+    
+    <main>
 	
 <div class="center">
 <div class="docs-demo-device docs-demo-device-ios">
@@ -116,17 +71,14 @@ textarea:focus {
 	
 
 <div class="docs-content">
-      <div class="improve-docs-link"><small>Version: semelekete</small></div>
-<img src="logo.png"/><hr/>
-
-<form action="search.html" method="GET" role="search">
-              <input style="width:100%;margin-top:10px;" type="text" class="input-sm form-control" name="q" placeholder="Search for snippets">
-          </form>
+     
 <p align="right"><a href="component.html" class="button">Mulai cepat</a>
 </p>
 <h1>Selamat Datang</h1>
-<ul class="docs-index"></ul>
+
 <div class="with-device" data-device-preview="https://yayanheeh.github.io/bangunan/kitchen-sink/core">
+	<ul class="docs-index"></ul>
+	<h2> Tentang kami</h2>
 	<p><b>Yayan He'eh</b> (framework)- adalah framework HTML seluler gratis dan open source untuk mengembangkan aplikasi seluler hibrida atau aplikasi web dengan tampilan dan nuansa asli iOS & Android. Dengan <b>Yayan He'eh</b> (framework) juga dapat membuat  aplikasi web
 	prototyping yang sangat diperlukan untuk menunjukkan prototipe aplikasi web anda.</p>
 
@@ -134,36 +86,33 @@ textarea:focus {
 <p>Salin-tempel stylesheet ke dalam Anda sebelum semua stylesheet lain memuat CSS kami: </p>
 
 	
-	
+	<h2>Css</h2>
 
 	<p>
-	<textarea placeholder>              
-<link rel="stylesheet" href="https://yayanheeh.github.io/semelekete/min.css">
-<link rel="stylesheet" href="https://yayanheeh.github.io/semelekete/semelekete/core/css/app.css"> </textarea>
+	<script src="https://gist.github.com/bpstore/c9b179a70c1666ccd201f6790818d2d9.js"></script>
 												</p>												
 
-	<p> Banyak dari komponen kami mengharuskan penggunaan JavaScript. Secara khusus. 
+	<p> Banyak dari komponen kami mengharuskan penggunaan JavaScript secara khusus. 
 												Tempatkan tag penutup , untuk mengaktifkannya. jQuery harus didahulukan,</p>
-													<p>
-	<textarea placeholder>
-  <script src="https://yayanheeh.github.io/semelekete/packages/core/js/min.js"></script>
-  <script src="https://yayanheeh.github.io/semelekete/semelekete/core/js/routes.js"></script>
-  <script src="https://yayanheeh.github.io/semelekete/semelekete/core/js/app.js"></script>
-  </textarea>
+	<H2>Java Script</h2>												<p>
+	
+  <script src="https://gist.github.com/bpstore/edeef2647ab8036c58789971133669dd.js"></script>
 	</p>
-<p>That command will launch Kitchen Sink with production (released) version of Framework7. To use latest development version in Kitchen Sink, use the following command instead:</p><pre><code class="">               $ npm run core:dev</pre></code>
+	
+	
+	<h2>Componet</h2>	 
 <p>
 	<table id="customers">
  
   <tr>
-    <td><a href="accordion.html">Accordion </a></td>
-    <td><a href="bagde.html">Bagde</a></td>
-    <td><a href="buton.html">Button</a></td>
+    <td><a href="accordion.html"><img src="https://img.icons8.com/material-sharp/20/000000/approval.png"> Accordion </a></td>
+    <td><a href="action-sheet.html"><img src="https://img.icons8.com/material-sharp/20/000000/approval.png"> Action sheet</a></td>
+    <td><a href="autocomplete.html"><img src="https://img.icons8.com/material-sharp/20/000000/approval.png"> Auto complete</a></td>
   </tr>
   <tr>
-   <td><a href="cards.html">Cards</a></td>
-    <td><a href="checkbox.html">Checkbox</a></td>
-    <td><a href="chips.html">Chips</a></td>
+   <td><a href="bagde.html"><img src="https://img.icons8.com/material-sharp/20/000000/approval.png"> Bagde</a></td>
+    <td><a href="buton.html"><img src="https://img.icons8.com/material-sharp/20/000000/approval.png"> Buton</a></td>
+    <td><a href="cards.html"><img src="https://img.icons8.com/material-sharp/20/000000/approval.png"> Cards</a></td>
   </tr>
   <tr>
    <td><a href="color-themes.html">Color theme</a></td>
@@ -208,10 +157,7 @@ textarea:focus {
 </table>
 
 	</p>
-
-</div>
-</div>
-</div></main>
+	</div>
 		<div class="home-block home-more">
 <div class="text">
 <h2>Many More Features...</h2>
@@ -251,76 +197,17 @@ Multiple Views (Split View)</h3><ol>
 <h3><img src="https://img.icons8.com/flat_round/30/ffffff/vertical-settings-mixer.png"> Dom7 - Custom Dom Library</h3><ol>
 <p>Seperti dikatakan di atas <b>Yayan He'eh</b> (Framework) tidak menggunakan pustaka pihak ketiga, bahkan untuk operasi DOM, bahkan jQuery. <b>Yayan He'eh</b> (Framework) memiliki perpustakaan DOM kustom sendiri yang memanfaatkan sebagian besar metode tepi dan kinerja tinggi untuk manipulasi DOM. Anda juga dapat menggunakannya dan Anda tidak perlu mempelajari sesuatu yang baru untuk itu, <b>Yayan He'eh</b> (Framework) memiliki sintaks yang sama dengan perpustakaan jQuery yang dikenal dengan dukungan metode yang paling populer dan banyak digunakan dan jQuery-like chaining.</p>
 </ol></div>
+	
 </div>
-		
-			<b>Component</b> <footer>
-	<div class="links-block-title"></div>
-	<div class="center">
-<div class="links">
-<div class="links-block">
-<div class="links-block-title"></div>
-<ul>
-<li><a href="accordion.html" target="_blank">Accordion</a></li>
-<li><a href="bagde.html">Bagde</a></li>
-<li><a href="buton.html">Button</a></li>
-<li><a href="cards.html">Card</a></li>
-<li><a href="checkbox.html">Checkbox</a></li>
-</ul>
+	
 </div>
-<div class="links-block">
-<div class="links-block-title"></div>
-<ul>
-<li><a href="chips.html">Chips</a></li>
-<li><a href="color-themes.html">Color themes</a></li>
-<li><a href="contacts-list.html">Contacts list</a></li>
-<li><a href="contentblock.html">Content block</a></li>
-<li><a href="data-table.html">Data table</a></li>
-</ul>
-</div>
-<div class="links-block">
-<div class="links-block-title"></div>
-<ul>
-<li><a href="dialog.html">Dialog</a></li>
-<li><a href="elevation.html">Elevation</a></li>
+	    </div>		
+</div> 
 
-<li><a href="floating-action-button.html">Floating</a></li>
-<li><a href="form.html">Form</a></li>
-<li><a href="gauge.html">Gauge</a></li>
-</ul>
-</div>
-<div class="links-block">
-<div class="links-block-title"></div>
-<ul>
-<li><a href="grid.html">Grid</a></li>
-<li><a href="infinite-scroll.html">infinite scroll </a></li>
-<li><a href="inputs.html">Inputs</a></li>
-	<li><a href="kalender.html">Callender</a></li>
-	
-	<li><a href="component.html">Selengkapnys</a></li>
-</ul>
-</div>
-<div class="footer-sponsors">
-<div class="footer-sponsors-title">Open source</div>
-<img src="agular.png" width="150" height="35"> <br/> <img src="bootstrap.png" width="150" height="35"/>
-	
-</div>
-</div>
-<div class="copy">
-<div class="copy-left">
-<p>
-<script src="//static.getclicky.com/js" type="text/javascript"></script>
-<script type="text/javascript">try{ clicky.init(101151406); }catch(e){}</script>
-<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101151406ns.gif" /></p></noscript></p>
-<p>2018 © Yayan He'eh surabaya-indonesia.</p>
-</div>
-<div class="copy-right">
-<p><small>Version: semelekete</small></p>
-</div>
-<div class="clearfix"></div>
-</div>
-	</div></footer>
-	
-</div>
+</main>
+    
+<div w3-include-html="footer.html">
+
 
 <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
 <script src="//cdn.framework7.io/js/jquery-1.11.0.min.js"></script>
@@ -355,3 +242,5 @@ Multiple Views (Split View)</h3><ol>
           }
       })();
     </script>
+	</body>
+	</html>
