@@ -1,53 +1,13 @@
 
 
 
-<style>
-  .content {
-  color : #a5a8a9;
-line-height: 1.6;
-margin: 2em auto;
- font-family: "David Libre", serif;
-background-color : #fafafa;
-background-repeat : repeat-x;
-background-position : 50% top;
-margin-top : 1px;
-margin-bottom : 1px;
-padding : 16px;
-width : 900px;
-border : 1px solid #d9d9d9;
-}
-  </style>
-  
 
   <link rel="stylesheet" href="//cdn.framework7.io/css/normalize.css">
 <link rel="stylesheet" href="//cdn.framework7.io/css/main.css">
 <link rel="shortcut icon" href="/i/favicon.png">
 <script src="//cdn.framework7.io/js/modernizr-2.7.1.min.js"></script>
 <title>infinite scroll</title>
-<div class="content">
-    <a href="index.html"> <img src="logo.png"></a> <div class="improve-docs-link"><small>Version: semelekete</small></div>
-<hr/>
 
-
-
-
-
-
-
-<main>
-<div class="center">
-<div class="docs-demo-device docs-demo-device-ios">
-<div class="docs-demo-device-buttons"><a class="active" data-theme="ios">iOS</a><a data-theme="md">Android</a></div>
-<div class="docs-demo-device-iframe">
-<iframe width="320" height="548" frameborder="0" scrolling="on"></iframe>
-<div class="fade-overlay"></div>
-</div>
-<div class="docs-demo-device-android-buttons">
-<div class="triangle"></div>
-<div class="circle"></div>
-<div class="square"></div>
-</div>
-</div>
 <script>
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
@@ -85,8 +45,28 @@ function includeHTML() {
 <script>
 includeHTML();
 </script>
+
+
+
+
+
+<main>
+<div class="center">
+<div class="docs-demo-device docs-demo-device-ios">
+<div class="docs-demo-device-buttons"><a class="active" data-theme="ios">iOS</a><a data-theme="md">Android</a></div>
+<div class="docs-demo-device-iframe">
+<iframe width="320" height="548" frameborder="0" scrolling="on"></iframe>
+<div class="fade-overlay"></div>
+</div>
+<div class="docs-demo-device-android-buttons">
+<div class="triangle"></div>
+<div class="circle"></div>
+<div class="square"></div>
+</div>
+</div>
+
 <div class="docs-content">
-<div class="improve-docs-link"><a href="../../external.html?link=https://github.com/framework7io/framework7-website/edit/master/src/pug/docs/infinite-scroll.pug" target="_blank">Improve this Doc</a></div>
+<div class="improve-docs-link"><a href="../../external.html?link=https://github.com/frark7io/framework7-website/edit/master/src/pug/docs/infinite-scroll.pug" target="_blank">Improve this Doc</a></div>
 <h1>Infinite Scroll</h1>
 <ul class="docs-index"></ul>
 <p>Infinite Scroll allows to load additional content or do any other required action when page scroll is near to the bottom.</p>
@@ -254,7 +234,8 @@ includeHTML();
 </div>
 </div>
 </main>
-</div>
+
+<div w3-include-html="footer.html"></div> 
 
 
 <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
