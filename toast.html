@@ -1,38 +1,48 @@
 
 
-<style>
-  .content {
-  color : #a5a8a9;
-line-height: 1.6;
-margin: 2em auto;
- font-family: "David Libre", serif;
-background-color : #fafafa;
-background-repeat : repeat-x;
-background-position : 50% top;
-margin-top : 1px;
-margin-bottom : 1px;
-padding : 16px;
-width : 900px;
-border : 1px solid #d9d9d9;
-}
-  </style>
-  
+
+  <meta charset="utf-8">
+<title>Toast | Yayan He'eh Framework</title>
 
   <link rel="stylesheet" href="//cdn.framework7.io/css/normalize.css">
 <link rel="stylesheet" href="//cdn.framework7.io/css/main.css">
 <link rel="shortcut icon" href="/i/favicon.png">
 <script src="//cdn.framework7.io/js/modernizr-2.7.1.min.js"></script>
-<title>Button</title>
-<div class="content">
-    <a href="index.html"> <img src="logo.png"></a> <div class="improve-docs-link"><small>Version: semelekete</small></div>
-<hr/>
-
-
-
-
-
-
-
+<script type="80ecfb67e1d7bc9ca0b2b0f1-text/javascript">
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+</head>
+<body>
+<div w3-include-html="header.html"></div>
+<script type="80ecfb67e1d7bc9ca0b2b0f1-text/javascript">
+includeHTML();
+</script>
 <main>
 <div class="center">
 <div class="docs-demo-device docs-demo-device-ios">
@@ -477,8 +487,7 @@ Object with events handlers. For example:<pre><code class="js"><span class="toke
 </div>
 </div>
 </main>
-</div>
-
+<div w3-include-html="footer.html"></div> 
 
 
 
