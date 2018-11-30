@@ -1,44 +1,180 @@
+<html>
+	<head>
+		<title>Yayan He'eh | Framework</title>
+		<link rel="icon" href="https://yayanheeh.online/icon.png">
+	<meta name="google-site-verification" content="y8P0JT6NhXbP5lKzsX6LYdzaK9VjF8M8msCICclw87w" />	
+<META NAME="Title" CONTENT=" Yayan He'eh Framework">
+<META NAME="Keywords" CONTENT="yayanheeh,yframework,frameworkindonesia,yayanheehframework,frameworksemelekete,frameworkandroid,frameworkios,android,ios,free,gratis,opensource">
+<META NAME="Description" CONTENT="Yayan He'eh  framework adalah framework HTML seluler gratis dan open source untuk mengembangkan aplikasi seluler hibrida atau aplikasi web dengan tampilan ...">
+<META NAME="Subject" CONTENT="Yayan he'eh ">
+<META NAME="Language" CONTENT="indonesia">
+<META NAME="Robots" CONTENT="INDEX,FOLLOW">
+
+
+ <link rel="fluid-icon" href="icon.png" title="Yayanheeh">
+	<style>.myButton {
+	background-color:#44c767;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:11px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+</style>
+	<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  overflow: hidden;
+  padding: 10px 10px;
+   background:linear-gradient(135deg,#0143a3,#0273d4)
+}
+
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: ;
+  color: white
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+</style>
+	<style>
+/* The device with borders */
+.smartphone1 {
+  position: relative;
+  width: 360px;
+  height: 650px;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+}
+
+/* The horizontal line on the top of the device */
+.smartphone1:before {
+  content1: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.smartphone1:after {
+  content1: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+.smartphone1 .content {
+  width: 360px;
+  height: 640px;
+  background: white;
+}
+</style>
+
 <link rel="stylesheet" href="//cdn.framework7.io/css/normalize.css">
 <link rel="stylesheet" href="//cdn.framework7.io/css/main.css">
-<link rel="shortcut icon" href="/i/favicon.png">
 <script src="//cdn.framework7.io/js/modernizr-2.7.1.min.js"></script>
+
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MVZLKQN');</script>
+<!-- End Google Tag Manager -->
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129566644-1"></script>
 <script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-};
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-129566644-1');
 </script>
+	</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVZLKQN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
+<div class="header">
+  <a href="#default" class="logo"><img src=" http://yayanheeh.online/lo-go.png"> 
+  <div class="header-right">
+ 
+	  <a href="index.html"><small>Version: Semelekete</small></a>
+  </div>
+</div>
 
-
-<div w3-include-html="header.html"></div> 
-
-<script>
-includeHTML();
-</script>
 
 
 
@@ -64,132 +200,246 @@ includeHTML();
 
 <div class="docs-content">
      
-<p align="right"><a href="component.html" class="button">Mulai cepat</a>
-</p>
+<span style="float:right;"><a href="https://gitlab.com/yayanheeh/semelekete/-/archive/master/semelekete-master.zip" class="myButton">Download</a></span>
 <h1>Selamat Datang</h1>
-
-<div class="with-device" data-device-preview="https://yayanheeh.github.io/bangunan/kitchen-sink/core">
+	
+<div class="with-device" data-device-preview="https://yayanheeh.gitlab.io/semelekete">
 	<ul class="docs-index"></ul>
 	<h2> Tentang kami</h2>
-	<p><b>Yayan He'eh</b> (framework)- adalah framework HTML seluler gratis dan open source untuk mengembangkan aplikasi seluler hibrida atau aplikasi web dengan tampilan dan nuansa asli iOS & Android. Dengan <b>Yayan He'eh</b> (framework) juga dapat membuat  aplikasi web
-	prototyping yang sangat diperlukan untuk menunjukkan prototipe aplikasi web anda.</p>
+	Selamat datang di Yayan He'eh  Framework
+Selamat datang di Yayan He'eh  Framework
+<p align="justify">
+Yayan He'eh Framework adalah kerangka kerja seluler HTML sumber terbuka dan gratis untuk mengembangkan aplikasi seluler hibrida atau aplikasi web dengan tampilan dan nuansa asli iOS atau Android (Material).
+Sebuah aplikasi prototyping yang sangat diperlukan untuk menunjukkan prototipe aplikasi kerja Anda.
+</p>
+<p align="justify">
 
-<h2>Mulai CEPAT</h2>
-<p>Salin-tempel stylesheet ke dalam Anda sebelum semua stylesheet lain memuat CSS kami: </p>
+Pendekatan utama Yayan He'eh Framework adalah memberi Anda kesempatan untuk membuat aplikasi iOS dan Android (Material) dengan HTML, CSS dan JavaScript dengan mudah dan jelas.
+Yayan He'eh Framework penuh dengan kebebasan. tidak membatasi imajinasi Anda atau menawarkan cara penyelesaian apa pun. Yayan He'eh Framework memberi Anda kebebasan!</p>
+<p align="justify">
 
+Yayan He'eh Framework tidak kompatibel dengan semua platform. Ini hanya fokus pada iOS dan Android (Material) untuk menghadirkan pengalaman terbaik dan kesederhanaan.
+</p>
+<p align="justify">
+Yayan He'eh Framework pasti untuk Anda jika Anda memutuskan untuk membangun aplikasi hibrida iOS dan Android (Cordova atau PhoneGap) atau aplikasi web yang tampak seperti dan terasa sebagai iOS atau Android asli (Material)
+</p>
 	
-	<h2>Css</h2>
+
+<h2>Css</h2>
+	<p>Salin-tempel stylesheet ke dalam folder <b>HEADER</b> Anda sebelum semua stylesheet lain memuat CSS kami: </p>
 
 	<p>
 	<script src="https://gist.github.com/bpstore/c9b179a70c1666ccd201f6790818d2d9.js"></script>
 												</p>												
 
+	<H2>Java Script</h2>
 	<p> Banyak dari komponen kami mengharuskan penggunaan JavaScript secara khusus. 
-												Tempatkan tag penutup , untuk mengaktifkannya. jQuery harus didahulukan,</p>
-	<H2>Java Script</h2>												<p>
+				untuk mengaktifkannya salin dan tempel kode <b>JAVASCRIPT</b> di bawah ini ke dalam weebsite anda</p>
+												<p>
 	
   <script src="https://gist.github.com/bpstore/edeef2647ab8036c58789971133669dd.js"></script>
 	</p>
 	
 	
-	<h2>Componet</h2>	 
+	<h2>Component</h2>	 
 <p>
 	<table id="customers">
  
   <tr>
-    <td><a href="accordion.html"><img src="https://img.icons8.com/material-sharp/20/000000/approval.png"> Accordion </a></td>
-    <td><a href="action-sheet.html"><img src="https://img.icons8.com/material-sharp/20/000000/approval.png"> Action sheet</a></td>
-    <td><a href="autocomplete.html"><img src="https://img.icons8.com/material-sharp/20/000000/approval.png"> Auto complete</a></td>
+    <td><a href="accordion.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Accordion </a></td>
+    <td><a href="action-sheet.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Action sheet</a></td>
+    <td><a href="autocomplete.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Auto complete</a></td>
   </tr>
   <tr>
-   <td><a href="bagde.html"><img src="https://img.icons8.com/material-sharp/20/000000/approval.png"> Bagde</a></td>
-    <td><a href="buton.html"><img src="https://img.icons8.com/material-sharp/20/000000/approval.png"> Buton</a></td>
-    <td><a href="cards.html"><img src="https://img.icons8.com/material-sharp/20/000000/approval.png"> Cards</a></td>
+   <td><a href="bagde.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Bagde</a></td>
+    <td><a href="buton.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Buton</a></td>
+    <td><a href="cards.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Cards</a></td>
   </tr>
   <tr>
-   <td><a href="color-themes.html">Color theme</a></td>
-    <td><a href="contacts-list.html">Contact list</a></td>
-    <td><a href="contentblock.html">Content block</a></td>
+   <td><a href="color-themes.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Color theme</a></td>
+    <td><a href="contacts-list.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Contact list</a></td>
+    <td><a href="contentblock.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Content block</a></td>
   </tr>
   <tr>
-    <td><a href="data-table.html">Table </a></td>
-    <td><a href="dialog.html">Dialog</a></td>
-    <td><a href="elevation.html">Elevation</a></td>
+    <td><a href="data-table.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Data table </a></td>
+    <td><a href="dialog.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Dialog</a></td>
+    <td><a href="elevation.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Elevation</a></td>
   </tr>
   <tr>
-    <td><a href="floating-action-button.html">Floating button</a></td>
-    <td><a href="form.html">Form</a></td>
-    <td><a href="gauge.html">Gauge</a></td>
+    <td><a href="floating-action-button.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Floating button</a></td>
+    <td><a href="form.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Form data</a></td>
+    <td><a href="gauge.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Gauge</a></td>
   </tr>
   <tr>
-    <td><a href="grid.html">Grid</a></td>
-    <td><a href="infinite-scroll.html">Infinite scroll</a></td>
-    <td><a href="inputs.html">Inputs</a></td>
+    <td><a href="grid.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Grid loyout</a></td>
+    <td><a href="infinite-scroll.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Infinite scroll</a></td>
+    <td><a href="inputs.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Inputs</a></td>
   </tr>
   <tr>
-    <td><a href="kalender.html">Kalender</a></td>
-    <td><a href="lazy-load.html">Lazy load</a></td>
-    <td><a href="lazy-modules.html">Lazy modul</a></td>
+    <td><a href="kalender.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Kalender</a></td>
+    <td><a href="lazy-load.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Lazy load</a></td>
+    <td><a href="lazy-modules.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Lazy modul</a></td>
   </tr>
   <tr>
-    <td><a href="link.html">Link</a></td>
-    <td><a href="list-index.html">List index</a></td>
-    <td><a href="list-view.html">List view</a></td>
+    <td><a href="link.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Link</a></td>
+    <td><a href="list-index.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> List index</a></td>
+    <td><a href="list-view.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> List view</a></td>
   </tr>
   <tr>
-    <td><a href="login-screen.html">Login screen</a></td>
-    <td><a href="messagebar.html">Messagebar</a></td>
-    <td><a href="messages.html">Message</a></td>
+    <td><a href="login-screen.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Login screen</a></td>
+    <td><a href="messagebar.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Messagebar</a></td>
+    <td><a href="messages.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Message</a></td>
   </tr>
   <tr>
-    <td><a href="navbar.html">Navbar</a></td>
-    <td><a href="notification.html">Notificasi</a></td>
-    <td><a href="page.html">Page</a></td>
+    <td><a href="navbar.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Navbar</a></td>
+    <td><a href="notification.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Notificasi</a></td>
+    <td><a href="page.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Page</a></td>
   </tr>
+		<tr>
+    <td><a href="panel.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Panel</a></td>
+    <td><a href="photo-browser.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Photo browser</a></td>
+    <td><a href="picker.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Picker</a></td>
+  </tr>
+<tr>
+    <td><a href="popover.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Popover</a></td>
+    <td><a href="preloader.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Preloader</a></td>
+    <td><a href="popup.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Popup</a></td>
+  </tr>
+<tr>
+    <td><a href="progressbar.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Progressbar</a></td>
+    <td><a href="pull-to-refresh.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Pull to refresh</a></td>
+    <td><a href="radio.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Radio</a></td>
+  </tr>
+<tr>
+    <td><a href="range-slider.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Range slider</a></td>
+    <td><a href="search.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Searh</a></td>
+    <td><a href="searchbar.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Searchbar</a></td>
+  </tr>
+<tr>
+    <td><a href="sheet-modal.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Sheet modal</a></td>
+    <td><a href="sheet.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Sheet</a></td>
+    <td><a href="smart-select.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Smart select</a></td>
+  </tr>
+		<tr>
+    <td><a href="stepper.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Stepper</a></td>
+    <td><a href="subnavbar.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Subnavdar</a></td>
+    <td><a href="swipeout.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Swipeout</a></td>
+  </tr>
+<tr>
+    <td><a href="swiper.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Swipper</a></td>
+    <td><a href="tabs.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Tabs</a></td>
+    <td><a href="timeline.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Timeline</a></td>
+  </tr>
+<tr>
+    <td><a href="toast.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Toast</a></td>
+    <td><a href="toggle.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Toggle</a></td>
+    <td><a href="toolbar-tabbar.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Tollbar tabbar</a></td>
+  </tr>
+<tr>
+    <td><a href="tooltip.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Tooltip</a></td>
+    <td><a href="typography.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> Typography</a></td>
+    <td><a href="virtual-list.html"><img src="https://img.icons8.com/color/20/000000/approval.png"> virtual list</a></td>
+  </tr>
+
 </table>
 
 	</p>
 	</div>
+	
+	<div class="home-block home-killer">
+<h2>Killer Features</h2>
+<div class="tab-links"><a class="active" href="#">Swipe Back</a><a href="#">Swipe Actions</a><a href="#">Dynamic Navbar</a><a href="#">Pull To Refresh</a><a href="#">Messages</a></div>
+<div class="tabs">
+<div class="tab active">
+<div class="smartphone1">
+  <div class="content">
+    <iframe src="/w3css/tryw3css_templates_band.htm" style="width:100%;border:none;height:100%" />
+  </div>
+</div>
+<div class="text">
+<h3>Swipe Back</h3>
+<p>One of Framework7' killing feature is supporting of iOS well known swipe back gesture from left border of screen when you want to get to the previous page. It simply works, and works perfectly as you expect it to do. Just swipe from left (or drag with mouse) area of the page to see smooth transition to the previous page. It is not just A-B transition. It really follows your finger with parallax animation while touch!</p>
+</div>
+</div>
+<div class="tab">
+<div class="pic">
+<video src="//cdn.framework7.io/i/feats/swipeout.mp4" loop></video>
+</div>
+<div class="text">
+<h3>Swipe Actions</h3>
+<p>Do you remember how you swipe left on the message in the Mail app if you want to delete it or mark as read? Yep, Framework7 has totally the same functionality for any list elements, with the same smooth animation and touch interaction!</p>
+</div>
+</div>
+<div class="tab">
+<div class="pic">
+<video src="//cdn.framework7.io/i/feats/navbar.mp4" loop></video>
+</div>
+<div class="text">
+<h3>Dynamic Navbar</h3>
+<p>As was mentioned already Framework7 makes everything to give you a feel of native iOS app. And one of the significant feature that improves this feeling is the dynamic navigation bar (navbar). You can see how its elements sliding and fading during pages transition and when you swipe back.</p>
+</div>
+</div>
+<div class="tab">
+<div class="pic">
+<video src="//cdn.framework7.io/i/feats/ptr.mp4" loop></video>
+</div>
+<div class="text">
+<h3>Pull To Refresh</h3>
+<p>Framework7 is probably the first and only framework that has this great feature realized on pure native scrolling! That is why pull to refresh behavior is perfect as possible and works totally equal in many native iOS apps!</p>
+</div>
+</div>
+<div class="tab">
+<div class="pic">
+<video src="//cdn.framework7.io/i/feats/messages.mp4" loop></video>
+</div>
+<div class="text">
+<h3>Messages</h3>
+<p>Framework7 comes with great realized "messages" widget that you can easily customize and integrate into your app for messaging between users or devices using some realtime sync data service like Pusher or PubNub.</p>
+</div>
+</div>
+</div>
+	
 		<div class="home-block home-more">
 <div class="text">
 <h2>Many More Features...</h2>
 </div>
 <div class="feats">
 <div class="feat"><h3>
-<img src="https://img.icons8.com/flat_round/30/ffffff/down-left-arrow.png"> Native Scrolling</h3><ol>
-<p>Terdengar aneh, tetapi salah satu fitur <b>Yayan He'eh</b> (framework) yang paling penting adalah ia hanya menggunakan native scrolling. Selain kelebihanya itu Anda masih dapat memiliki gulir yang mengagumkan dengan momentum dan resistensi terpental tanpa masalah gulir!</p>
+<img src="https://img.icons8.com/flat_round/30/ffffff/down-left-arrow.png"> <small>Native Scrolling</small></h3><ol>
+<p align="justify"> Terdengar aneh, tetapi salah satu fitur <b>Yayan He'eh</b> Framework yang paling penting adalah ia hanya menggunakan native scrolling. Selain kelebihanya itu Anda masih dapat memiliki gulir yang mengagumkan dengan momentum dan resistensi terpental tanpa masalah gulir!</p>
 </ol></div>
 <div class="feat"><h3><img src="https://img.icons8.com/flat_round/30/ffffff/multiple-messages.png"> 
-Multiple Views (Split View)</h3><ol>
-<p><b>Yayan He'eh</b> (framework) mendukung jumlah yang tidak terbatas dari pandangan terisolasi yang berbeda. Dan hal yang menyenangkan adalah Anda dapat dengan mudah mengontrol setiap tampilan tanpa baris JavaScript hanya menggunakan atribut "tampilan data" pada tautan.</p>
+<small>Multiple Views (Split View)</small></h3><ol>
+ <p align="justify"> <b>Yayan He'eh</b> Framework mendukung jumlah yang tidak terbatas dari pandangan terisolasi yang berbeda. Dan hal yang menyenangkan adalah Anda dapat dengan mudah mengontrol setiap tampilan tanpa baris JavaScript hanya menggunakan atribut "tampilan data" pada tautan.</p>
 </ol></div>
 <div class="feat">
-<h3><img src="https://img.icons8.com/bubbles/30/ffffff/library.png">
-	 Library Agnostic</h3><ol>
-<p><b>Yayan He'eh</b> (framework) tidak bergantung pada pustaka pihak ketiga. Itulah mengapa sangat ringan, kinerja sangat fleksibel.</p>
+<h3><img src="https://img.icons8.com/bubbles/30/ffffff/library.png"><small>
+	
+	Library Agnostic</small></h3><ol>
+<p align="justify">  <b>Yayan He'eh</b> Framework tidak bergantung pada pustaka pihak ketiga. Itulah mengapa sangat ringan, kinerja sangat fleksibel.</p>
 </ol></div>
 <div class="feat">
-<h3><img src="https://img.icons8.com/flat_round/30/ffffff/link.png">
-	 Clear JS API</h3><ol>
-<p>Tidak perlu mempelajari sesuatu yang baru dengan <b>Yayan He'eh</b> (framework). Memiliki metode API JavaScript yang sangat jelas dan mudah untuk mengontrol setiap bagian dari aplikasi web Anda.</p>
+<h3><img src="https://img.icons8.com/flat_round/30/ffffff/link.png"><small>
+	 Clear JS API</small></h3><ol>
+<p align="justify"> Tidak perlu mempelajari sesuatu yang baru dengan <b>Yayan He'eh</b> Framework karena Memiliki metode API JavaScript yang sangat jelas dan mudah untuk mengontrol setiap bagian dari aplikasi web Anda.</p>
 </ol></div>
 <div class="feat">
-<h3><img src="https://img.icons8.com/clouds/35/ffffff/performance-2.png"> High-performance Animation</h3><ol>
-<p>Kinerja <b>Yayan He'eh</b> (framework) hanya menggunakan animasi kinerja tinggi, Dipercepat dengan animasi dan transisi css untuk mencapai hasil terbaik.</p>
+<h3><img src="https://img.icons8.com/clouds/35/ffffff/performance-2.png"><small> High-performance Animation</small></h3><ol>
+ <p align="justify"> Kinerja <b>Yayan He'eh</b> Framework hanya menggunakan animasi kinerja tinggi, Dipercepat dengan animasi dan transisi css untuk mencapai hasil terbaik.</p>
 </ol></div>
 <div class="feat">
-<h3> <img src="https://img.icons8.com/clouds/35/ffffff/file.png"> Pages Animation</h3><ol>
-<p>Salah satu target utama <b>Yayan He'eh</b> (framework) memiliki tampilan dan perasaan asli dari aplikasi iOS dan Android. Dan <b>Yayan He'eh</b> (framework) adalah satu-satunya kerangka kerja yang bisa menyelesaikannya dan menawarkan animasi halaman 1: 1 dengan efek paralaks halus, mengubah opacity dan bayangan saat memuat halaman baru.</p>
+<h3> <img src="https://img.icons8.com/clouds/35/ffffff/file.png"><small> Pages Animation</small></h3><ol>
+ <p align="justify"> Salah satu target utama <b>Yayan He'eh</b> Framework adalah memiliki tampilan dan perasaan asli dari aplikasi iOS dan Android. Dan <b>Yayan He'eh</b> Framework adalah satu-satunya kerangka kerja yang bisa menyelesaikannya dan menawarkan animasi halaman 1: 1 dengan efek paralaks halus, mengubah opacity dan bayangan saat memuat halaman baru.</p>
 </ol></div>
 <div class="feat">
-<h3><img src="https://img.icons8.com/dusk/30/ffffff/time-machine.png"> XHR + Caching + History + Preloading</h3><ol>
-<p>Kombinasi yang tidak ada duanya untuk membuat perutean aplikasi Anda sesempurna mungkin. <b>Yayan He'eh </b> (Framework) siap untuk merutekan halaman aplikasi Anda menggunakan XHR (opsional) dengan metode internal sendiri dan caching internal HTML yang dapat dikonfigurasi yang memungkinkan untuk memuat halaman lebih cepat dan menghemat banyak waktu dan lalu lintas untuk pengguna Anda! Ini memuat halaman melalui Ajax satu-satunya per periode caching tertentu (10 menit secara default), kali lain hanya mendapatkannya dari memori. Ini memungkinkan untuk membuat permintaan lebih lanjut segera!</p>
+<h3><img src="https://img.icons8.com/dusk/30/ffffff/time-machine.png"><small> XHR+Caching+History+Preloading</small></h3><ol>
+ <p align="justify"> Kombinasi yang tidak ada duanya untuk membuat perutean aplikasi Anda sesempurna mungkin. <b>Yayan He'eh </b> Framework siap untuk merutekan halaman aplikasi Anda menggunakan XHR (opsional) dengan metode internal sendiri dan caching internal HTML yang dapat dikonfigurasi yang memungkinkan untuk memuat halaman lebih cepat dan menghemat banyak waktu dan lalu lintas untuk pengguna Anda! Memuat halaman melalui Ajax satu-satunya per periode caching tertentu (10 menit secara default), dan hanya mendapatkannya dari memori. Ini memungkinkan untuk membuat permintaan lebih lanjut!</p>
 </ol></div>
 <div class="feat">
-<h3><img src="https://img.icons8.com/flat_round/30/ffffff/vertical-settings-mixer.png"> Dom7 - Custom Dom Library</h3><ol>
-<p>Seperti dikatakan di atas <b>Yayan He'eh</b> (Framework) tidak menggunakan pustaka pihak ketiga, bahkan untuk operasi DOM, bahkan jQuery. <b>Yayan He'eh</b> (Framework) memiliki perpustakaan DOM kustom sendiri yang memanfaatkan sebagian besar metode tepi dan kinerja tinggi untuk manipulasi DOM. Anda juga dapat menggunakannya dan Anda tidak perlu mempelajari sesuatu yang baru untuk itu, <b>Yayan He'eh</b> (Framework) memiliki sintaks yang sama dengan perpustakaan jQuery yang dikenal dengan dukungan metode yang paling populer dan banyak digunakan dan jQuery-like chaining.</p>
+<h3><img src="https://img.icons8.com/flat_round/30/ffffff/vertical-settings-mixer.png"> <small>Dom7 Custom Dom Library</small></h3><ol>
+ <p align="justify"> Seperti dikatakan di atas <b>Yayan He'eh</b> Framework tidak menggunakan pustaka pihak ketiga, bahkan untuk operasi DOM dan jQuery. <b>Yayan He'eh</b> Framework memiliki perpustakaan DOM kustom sendiri yang memanfaatkan sebagian besar metode tepi dan kinerja tinggi untuk manipulasi DOM. Anda juga dapat menggunakannya dan Anda tidak perlu mempelajari sesuatu yang baru untuk itu, <b>Yayan He'eh</b> Framework memiliki sintaks yang sama dengan perpustakaan jQuery yang dikenal dengan dukungan metode yang paling populer dan banyak digunakan dan jQuery-like chaining.</p>
 </ol></div>
-	<div w3-include-html="footer.html">
+	
 </div>
 	
 </div>
@@ -198,7 +448,81 @@ Multiple Views (Split View)</h3><ol>
 
 </main>
     
+<footer>
+	<div class="links-block-title"></div>
+	<div class="center">
+<div class="links">
+<div class="links-block">
+<div class="links-block-title"></div>
+<ul>
+<li><a href="accordion.html" target="_blank">Accordion</a></li>
+<li><a href="bagde.html">Bagde</a></li>
+<li><a href="buton.html">Button</a></li>
+<li><a href="cards.html">Card</a></li>
+<li><a href="checkbox.html">Checkbox</a></li>
+</ul>
+</div>
+<div class="links-block">
+<div class="links-block-title"></div>
+<ul>
+<li><a href="chips.html">Chips</a></li>
+<li><a href="color-themes.html">Color themes</a></li>
+<li><a href="contacts-list.html">Contacts list</a></li>
+<li><a href="contentblock.html">Content block</a></li>
+<li><a href="data-table.html">Data table</a></li>
+</ul>
+</div>
+<div class="links-block">
+<div class="links-block-title"></div>
+<ul>
+<li><a href="dialog.html">Dialog</a></li>
+<li><a href="elevation.html">Elevation</a></li>
 
+<li><a href="floating-action-button.html">Floating</a></li>
+<li><a href="form.html">Form</a></li>
+<li><a href="gauge.html">Gauge</a></li>
+</ul>
+</div>
+<div class="links-block">
+<div class="links-block-title"></div>
+<ul>
+<li><a href="grid.html">Grid</a></li>
+<li><a href="infinite-scroll.html">infinite scroll </a></li>
+<li><a href="inputs.html">Inputs</a></li>
+	<li><a href="kalender.html">Callender</a></li>
+	
+	<li><a href="component.html">Selengkapnys</a></li>
+</ul>
+</div>
+<div class="footer-sponsors">
+<div class="footer-sponsors-title">Open source</div>
+<img src="agular.png" width="150" height="35"> <br/> <img src="bootstrap.png" width="150" height="35"/><br/>
+	<img src="http://yayanheeh.online/lo-go.png" width="150" height="35"/>
+	
+</div>
+</div>
+<div class="copy">
+<div class="copy-left">
+<p>
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(101151406); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101151406ns.gif" /></p></noscript></p>
+<p>2018 © Yayan He'eh surabaya-indonesia.</p>
+</div>
+<div class="copy-right">
+<p><small>Version: semelekete</small></p>
+	<p>  <div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,id', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+         </p>
+	
+	
+</div>
+<div class="clearfix"></div>
+</div>
+	</div></footer>
 
 
 <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
@@ -234,3 +558,6 @@ Multiple Views (Split View)</h3><ol>
           }
       })();
     </script>
+	
+	</body>
+	</html>
