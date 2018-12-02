@@ -56,7 +56,6 @@ includeHTML();
 <div class="square"></div>
 </div>
 </div>
-
 <div class="docs-content">
 <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/docs/calendar.pug" target="_blank">Improve this Doc</a></div>
 <h1>Calendar / Datepicker</h1>
@@ -93,7 +92,7 @@ includeHTML();
 <p class="method-returns">Method returns Calendar's instance</p>
 </div>
 <p>For example:</p><pre><code class="js"><span class="token keyword">var</span> calendar <span class="token operator">=</span> app<span class="token punctuation">.</span>calendar<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    input<span class="token punctuation">:</span> <span class="token string">'#calendar-input'</span>
+    inputEl<span class="token punctuation">:</span> <span class="token string">'#calendar-input'</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></code>
 <h2>Calendar Parameters</h2>
 <p>Let's look on list of all available Calendar parameters:</p>
@@ -734,7 +733,7 @@ Object with events handlers. For example:<pre><code class="js"><span class="toke
 <tr>
 <td>calendar:opened</td>
 <td>Calendar Element<span>&lt;div class="calendar"&gt;</span></td>
-<td>Event will be triggered after Calendar completes its opening animation</td>
+ <td>Event will be triggered after Calendar completes its opening animation</td>
 </tr>
 <tr>
 <td>calendar:close</td>
@@ -839,7 +838,7 @@ Object with events handlers. For example:<pre><code class="js"><span class="toke
 <tr>
 <td>calendarOpened</td>
 <td>app</td>
- </tr>
+</tr>
 <tr>
 <td>close</td>
 <td>calendar</td>
@@ -873,7 +872,7 @@ Object with events handlers. For example:<pre><code class="js"><span class="toke
 </tbody>
 </table>
 <div class="with-device">
-<h2 data-device-preview="../docs-demos/core/calendar.html">Examples</h2>
+<h2 data-device-preview="demo/kalendar.html">Examples</h2>
 <h4>Default Setup</h4><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block-title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Default setup<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>list no-hairlines-md<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
